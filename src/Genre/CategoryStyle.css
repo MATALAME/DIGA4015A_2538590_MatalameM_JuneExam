@@ -1,0 +1,13 @@
+.category-card {
+  width: 200px;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer; /* ← This makes the cursor a hand */
+}
+
+.category-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
