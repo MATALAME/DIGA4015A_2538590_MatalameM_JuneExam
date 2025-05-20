@@ -6,17 +6,17 @@ import { useGameContext } from '../Games/GameContext';
 
 const CategoryPage = () => {
 
-//     useEffect(() => {
-//   fetch('https://www.freetogame.com/api/games')  
-//     .then(res => res.json())
-//     .then(data => {
-//       const filtered = data.filter(game =>
+//     useEffect(() => {                                        //Instead of using context, I mistakenly fetched the data twice, in both the 
+//   fetch('https://www.freetogame.com/api/games')              //GameComp and CategoryPage, making a filtered list for the categories but I noticed
+//     .then(res => res.json())                                 //that it wasnt the same as the info in the GameComp which included prices, which made
+//     .then(data => {                                          //it inefficient to fetch the data twice for the same information. So I had to go back and 
+//       const filtered = data.filter(game =>                   //create the GameContext.
 //         game.genre.toLowerCase() === genre.toLowerCase()
 //       );
 //       setFilteredGames(filtered);
 //     });}, [genre]);
 
-  const { genre } = useParams();
+  const { genre } = useParams();  //The code checks the the part of the URL that changes (the genre) so it can then display the filtered right games. 
   const { games } = useGameContext(); 
 
   const filteredGames = games.filter(game =>

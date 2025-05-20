@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import GameComp from "./Games/GameComp";
 import CategoryCard from "./Genre/CategoryCard";
-
+ 
 import shooter from "./Images/Shooter.jpg";
 import racing from "./Images/Racing.jpg";
 import rpg from "./Images/RPG.jpg";
@@ -23,14 +23,13 @@ function Home (){
              
       <h2>CATEGORIES</h2>
       <div className="Genre">
-        {genres.map((genre) => (
-          <CategoryCard key={genre.name} name={genre.name} image={genre.image} />
+        {genres.map((genre) => ( 
+          <CategoryCard key={genre.name} name={genre.name} image={genre.image} /> // Passing each 'genre.name' and 'genre.image' as props to be accessible in CategoryCard.
         ))}
       </div>
 
-      {/* All Games Section */}
       <h2 className="All Games">All Games</h2>
-            <GameComp/>
+            <GameComp/>  {/* //All the games will appear here */}
         </div>
     )
 }
