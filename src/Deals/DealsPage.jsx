@@ -6,27 +6,28 @@ const DealsPage = () => {
   const { games } = useGameContext();
 
   
-  const getRandomFive = (list) => {
-    const copy = [...list];
-    copy.sort(() => Math.random() - 0.5);
-    return copy.slice(0, 5);
+  const randomFive = (list) => {
+    const add = [...list];
+    add.sort(() => Math.random() - 0.5); //Shuffles the copied list into a random order.
+    return add.slice(0, 5); //Takes the first 5 items from the randomly shuffled list and gives them back.
   };
+  
+  const under500 = randomFive(games.filter(game => game.price < 500));  
+  const under1000 = randomFive(games.filter(game => game.price < 1000));
+  //These two lines filter games with a price under R500 and price under R1000. Picks 5 random ones using randomFive.
 
-  const under500 = getRandomFive(games.filter(game => game.price < 500));
-  const under1000 = getRandomFive(games.filter(game => game.price < 1000));
 
-
-  const discount15 = getRandomFive(games).map(game => ({
+  const discount15 = randomFive(games).map(game => ({
     ...game,
     title: `${game.title} (15% OFF)`
-  }));
+  }));  //This adds “(15% OFF)” to each gaming title without changing the actual pricing logic from my other scripts. The ones under are "30% OFF" and "50% OFF"
 
-  const discount30 = getRandomFive(games).map(game => ({
+  const discount30 = randomFive(games).map(game => ({
     ...game,
     title: `${game.title} (30% OFF)`
   }));
 
-   const discount50 = getRandomFive(games).map(game => ({
+   const discount50 = randomFive(games).map(game => ({
     ...game,
     title: `${game.title} (50% OFF)`
   }));
