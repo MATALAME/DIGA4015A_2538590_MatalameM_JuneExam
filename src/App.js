@@ -8,6 +8,8 @@ import Home from './Home';
 import CategoryPage from './Genre/CategoryPage';
 import PurchasePage from './Purchase/PurchasePage';
 import DealsPage from './Deals/DealsPage';
+import PaymentPage from './Purchase/PaymentPage';
+import PlatformPage from './Platfrom/PlatformPage';
 
 function App() {
   return (
@@ -21,9 +23,11 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/home" element={<Home />} />
               <Route path="/category/:genre" element={<CategoryPage />} />
+              <Route path="/platform/:platform" element={<PlatformPage />} />
               <Route path="/purchase/:id" element={<PurchasePage />} />
               <Route path="/deals" element={<DealsPage />} />
-
+              <Route path="/pay/:id" element={<PaymentPage />} />
+            
             </Routes>
         </BrowserRouter>
        </GameProvider>
