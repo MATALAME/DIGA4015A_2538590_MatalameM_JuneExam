@@ -30,8 +30,8 @@ const genres = [
   const platforms = [
     { name: "Playstation", image: playstation },
     { name: "xbox", image: xbox },
-    { name: "pcgames", image: pcgames },
-    { name: "webrowser", image: webrowser },
+    { name: "pc games", image: pcgames },
+    { name: "web browser", image: webrowser },
   ];
 
 function Home (){

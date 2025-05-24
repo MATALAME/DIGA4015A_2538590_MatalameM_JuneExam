@@ -11,6 +11,7 @@ import DealsPage from './Deals/DealsPage';
 import PaymentPage from './Purchase/PaymentPage';
 import PlatformPage from './Platfrom/PlatformPage';
 import GamesPage from './Games/GamesPage';
+import ProfilePage from './Profile/ProfilePage';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/deals" element={<DealsPage />} />
               <Route path="/pay/:id" element={<PaymentPage />} />
               <Route path="/games" element={<GamesPage />} />
+              <Route path="/profile" element={<ProfilePage/>} />
             
             </Routes>
         </BrowserRouter>

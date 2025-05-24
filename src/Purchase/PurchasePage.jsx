@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useGameContext } from '../Games/GameContext';
+import GameComp from '../Games/GameComp';
 
 const PurchasePage = () => {
   const { id } = useParams();
@@ -16,18 +17,29 @@ const PurchasePage = () => {
     navigate(`/pay/${id}`);
   };
 
+  const suggestedGames = [...games] 
+    .sort(() => 0.5 - Math.random())  //Once again. I randomized the games to not give repetitive results to the users. 
+    .slice(0, 4);                    
+
   return (
-    <div className="PurchasePage">
-      <h2>{game.title}</h2>
-      <img src={game.thumbnail} alt={game.title} />
-      <p><strong>Genre:</strong> {game.genre}</p>
-      <p><strong>Publisher:</strong> {game.publisher}</p>
-      <p><strong>Developer:</strong> {game.developer}</p>
-      <p><strong>Release Date:</strong> {game.release_date}</p>
-      <p><strong>Price:</strong> R{game.price}</p>
-      <p><strong>Description:</strong> {game.short_description}</p>
-      <button onClick={handlePay}>Pay</button> 
-      <p>*All game purchases are final, but refunds may be issued for technical issues or accidental purchases within 48 hours*</p>
+    <div> 
+      <div className="PurchasePage">
+        <h2>{game.title}</h2>
+        <img src={game.thumbnail} alt={game.title} />
+        <p><strong>Genre:</strong> {game.genre}</p>
+        <p><strong>Publisher:</strong> {game.publisher}</p>
+        <p><strong>Developer:</strong> {game.developer}</p>
+        <p><strong>Release Date:</strong> {game.release_date}</p>
+        <p><strong>Price:</strong> R{game.price}</p>
+        <p><strong>Description:</strong> {game.short_description}</p>
+        <button onClick={handlePay}>Pay</button> 
+        <p>*All game purchases are final, but refunds may be issued for technical issues or accidental purchases within 48 hours*</p>
+      </div>
+
+      <div className='Suggested'>
+        <h2>Check out other games</h2>
+        <GameComp games={suggestedGames} />
+      </div>
     </div>
   );
 };

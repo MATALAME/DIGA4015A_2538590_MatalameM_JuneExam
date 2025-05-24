@@ -11,9 +11,10 @@ function NavBar (){
         <img src={logo} alt="Raw Games" />
         {/* <Link to="/">Landing</Link> */}
         <Link to="/home">Home</Link>
-        <Link to="signup">Sign Up</Link> 
+        {/* <Link to="signup">Sign Up</Link>  */}
         <Link to="/games">Games</Link>
         <Link to="/deals">Deals</Link>
+        <Link to="/profile">Profile</Link>
         </div>
     </nav>
     )
