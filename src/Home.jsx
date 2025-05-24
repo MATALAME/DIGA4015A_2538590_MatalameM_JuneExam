@@ -5,11 +5,12 @@ import CategoryCard from "./Genre/CategoryCard";
 import PlatformCard from "./Platfrom/PlatformCard";
 
 //Images for Categories
-import shooter from "./Images/Shooter.jpg";
+import mmorpg from "./Images/MMORPG.jpg";
+import fighting from "./Images/Fight.jpg"
 import racing from "./Images/Racing.jpg";
-import rpg from "./Images/RPG.jpg";
-import action from "./Images/Action.jpg";
-import card from "./Images/CardGame.jpg";
+import sports from "./Images/Sports.jpg";
+import shooter from "./Images/Shooter.jpg";
+import strategy from "./Images/Strategy.jpg";
 
 //Images for Platfroms
 import playstation from "./Images/PlaystationLogo.png"
@@ -18,11 +19,12 @@ import pcgames from "./Images/PCGameLogo.png"
 import webrowser from "./Images/WebBrowserLogo.jpg"
 
 const genres = [
-    { name: "Shooter", image: shooter },
+    { name: "MMORPG", image: mmorpg },
+    { name: "Fighting", image: fighting },
     { name: "Racing", image: racing },
-    { name: "RPG", image: rpg },
-    { name: "Action", image: action },
-    { name: "Card Games", image: card },
+    { name: "Sports", image: sports },
+    { name: "Shooter", image: shooter },
+    { name: "Strategy", image: strategy },
   ];
 
   const platforms = [

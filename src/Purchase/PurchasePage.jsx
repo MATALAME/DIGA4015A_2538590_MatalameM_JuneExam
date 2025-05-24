@@ -27,6 +27,7 @@ const PurchasePage = () => {
       <p><strong>Price:</strong> R{game.price}</p>
       <p><strong>Description:</strong> {game.short_description}</p>
       <button onClick={handlePay}>Pay</button> 
+      <p>*All game purchases are final, but refunds may be issued for technical issues or accidental purchases within 48 hours*</p>
     </div>
   );
 };

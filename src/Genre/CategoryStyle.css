@@ -11,3 +11,16 @@
   object-fit: cover;
   border-radius: 8px;
 }
+
+.genre-cover-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.genre-cover-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  /* border-radius: 8px; */
+}
