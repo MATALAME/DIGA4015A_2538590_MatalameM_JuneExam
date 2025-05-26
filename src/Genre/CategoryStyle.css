@@ -2,7 +2,7 @@
   width: 200px;
   text-align: center;
   margin: 10px;
-  cursor: pointer; /* ← This makes the cursor a hand */
+  cursor: pointer; 
 }
 
 .category-image {
@@ -10,6 +10,14 @@
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.Genre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px; 
+  padding: 20px;
 }
 
 .genre-cover-container {
@@ -24,3 +32,4 @@
   object-fit: cover;
   /* border-radius: 8px; */
 }
+

@@ -1,8 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import GameComp from "./Games/GameComp";
 import CategoryCard from "./Genre/CategoryCard";
 import PlatformCard from "./Platfrom/PlatformCard";
+import { useGameContext } from "./Games/GameContext";
+import "./Home.css"
 
 //Images for Categories
 import mmorpg from "./Images/MMORPG.jpg";
@@ -35,27 +38,60 @@ const genres = [
   ];
 
 function Home (){
+    const navigate = useNavigate();
+    const { games } = useGameContext();
+
+    const getRandomGame = (list) => {
+      const randomIndex = Math.floor(Math.random() * list.length);
+      return list[randomIndex];
+    };
+
+    const games30 = games.map(game => ({
+      ...game,title: `(30% OFF)`, image: game.thumbnail  
+    }));
+
+    const games50 = games.map(game => ({
+      ...game,title: `(50% OFF)`,image: game.thumbnail  
+    }));
+
+    const discountGame30 = getRandomGame(games30);
+    const discountGame50 = getRandomGame(games50);
+
     return(
-
-        <div>
-          <h2>Platfroms</h2>
-          <div className="Platforms">
-            {platforms.map((platform) => ( 
-              <PlatformCard key={platform.name} name={platform.name} image={platform.image} /> 
-            ))}
+    <div>
+      <h2>Deals</h2>
+      <div className="discount-games">
+        {discountGame30 && (
+          <div className="discount-game" onClick={() => navigate('/deals')}>
+            <img src={discountGame30.image} alt={discountGame30.title} className="discount-game-image clickable"/>
+            <p>{discountGame30.title}</p>
           </div>
-
-        <h2>CATEGORIES</h2>
-          <div className="Genre">
-            {genres.map((genre) => ( 
-              <CategoryCard key={genre.name} name={genre.name} image={genre.image} /> // Passing each 'genre.name' and 'genre.image' as props to be accessible in CategoryCard.
-            ))}
+        )}
+        {discountGame50 && (
+          <div className="discount-game" onClick={() => navigate('/deals')}>
+            <img src={discountGame50.image} alt={discountGame50.title} className="discount-game-image clickable"/>
+            <p>{discountGame50.title}</p>
           </div>
+        )}
+      </div> 
+
+      <h2>Platforms</h2>
+      <div className="Platforms">
+        {platforms.map((platform) => (
+          <PlatformCard key={platform.name} name={platform.name} image={platform.image} />
+        ))}
+      </div>
+
+      <h2>Categories</h2>
+      <div className="Genre">
+        {genres.map((genre) => (
+          <CategoryCard key={genre.name} name={genre.name} image={genre.image} />
+        ))}
+      </div>
 
       <h2 className="All Games">All Games</h2>
-            <GameComp/>  {/* //All the games will appear here */}
-        </div>
-    )
+      <GameComp /> {/* All the games will appear here */}
+    </div>
+  );
 }
-
 export default Home;
