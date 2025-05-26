@@ -12,6 +12,8 @@ import PaymentPage from './Purchase/PaymentPage';
 import PlatformPage from './Platfrom/PlatformPage';
 import GamesPage from './Games/GamesPage';
 import ProfilePage from './Profile/ProfilePage';
+import Scroll from './Technical/Scroll';
+import "./App.css";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <GameProvider>
         <BrowserRouter>
           <NavBar/>
+          <Scroll/>
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/signup" element={<Signup />} />

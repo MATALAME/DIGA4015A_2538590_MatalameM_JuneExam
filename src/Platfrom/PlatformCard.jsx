@@ -12,7 +12,7 @@ const PlatformCard = ({ name, image }) => {
   return (
     <div className="platform-card" onClick={handleClick}> 
       <img src={image} alt={name} className="platform-image" /> 
-      {/* <p>{name}</p> */}
+      <p>{name.toUpperCase()}</p>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGameContext } from './GameContext';
+import "./GameComp.css";
 
 const GameComp = ({ games: propGames }) => { 
   //I made a mistake at first because I made the code only use the context without the exception of games prop, so the GameComp ended up rendering 
@@ -17,17 +18,17 @@ const GameComp = ({ games: propGames }) => {
   };
 
   return (
-    <div className="GameCard">
+     <div className="game-grid">
       {games.map((game) => (
-        <div key={game.id}>
-          <img src={game.thumbnail} alt={game.title} /> {/* dynamic alt text :)  */}
-          <div className="GameCard">
+         <div key={game.id} className="game-card">
+          <img src={game.thumbnail} alt={game.title} className="game-image" /> {/* dynamic alt text :)  */}
+          <div className="game-info">
             <h3>{game.title}</h3>
-            <p>{game.platform}</p>
-            <p>{game.short_description}</p>
-            <p><strong>Price:</strong> R{game.price}</p>
-            <div className="Buy-Details">
-              <button className="Buy-Buttons" onClick={() => handleBuy(game.id)}>Buy</button>
+            <p className="platform">{game.platform}</p>
+            <p className="description">{game.short_description}</p>
+             <p className="price"><strong>Price:</strong> {game.price === 0 ? 'Free' : `R${game.price}`}</p>
+            <div className="btn-container">
+              <button className="buy-btn" onClick={() => handleBuy(game.id)}>Buy</button>
             </div>
           </div>
         </div>

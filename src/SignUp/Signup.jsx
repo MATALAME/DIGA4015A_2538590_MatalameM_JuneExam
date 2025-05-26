@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import signup from '../Images/SignUp.jpg'
 
 function Signup() {
   const navigate = useNavigate();
@@ -62,6 +63,8 @@ function Signup() {
           </button>
         </form>
       </div>
+
+      <img src = {signup}></img>
 
       <footer className="signup-footer">
         © 2025 Raw Games. All rights reserved.
