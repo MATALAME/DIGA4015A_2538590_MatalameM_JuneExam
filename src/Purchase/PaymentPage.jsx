@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useGameContext } from '../Games/GameContext';
+import "./PurchasePage.css"
 
 const PaymentPage = () => {
   const { id } = useParams();

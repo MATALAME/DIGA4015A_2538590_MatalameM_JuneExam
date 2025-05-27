@@ -1,29 +1,33 @@
-.platform-image {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
 .Platforms {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 0.1rem; 
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 0.5rem;
+  justify-items: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 1rem auto;
 }
 
 .platform-card {
-  width: 150px; 
+  width: 120px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
   cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.platform-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.3rem;
 }
 
 .platform-card:hover {
   transform: translateY(-5px);
 }
 
-/* .platform-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-} */

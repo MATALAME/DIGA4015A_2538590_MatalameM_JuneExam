@@ -1,3 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.both {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 1rem auto; 
+  padding: 0 1rem;
+}
+
+.Category-title{
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.discount-games {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 0; 
+  padding: 0;
+}
+
+.discount-game {
+  position: relative;
+  text-align: center;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #004AAD; 
+  color: white;
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  z-index: 1;
+}
+
+.discount-game-image {
+  width: 500px;
+  border-radius: 20px;
+  height: 220px;
+}
+
+.discount-game p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.Platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 0; 
+  padding: 0;
+}
+
+.card {
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 .clickable {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -6,21 +85,4 @@
 .clickable:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.discount-game {
-  margin: 1rem;
-  border-radius: 8px;
-}
-
-.discount-game-image {
-  width: 400px; 
-  border-radius: 10px; 
-}
-
-.discount-games {
-  display: flex;
-  gap: 1rem; 
-  margin-bottom: 2rem;
-  flex-wrap: wrap; 
 }

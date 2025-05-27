@@ -16,10 +16,10 @@ import shooter from "./Images/Shooter.jpg";
 import strategy from "./Images/Strategy.jpg";
 
 //Images for Platfroms
-import playstation from "./Images/PlaystationLogo.png"
+import playstation from "./Images/PlaystationLogoWhite.png"
 import xbox from "./Images/XBOXLogo.png"
 import pcgames from "./Images/PCGameLogo.png"
-import webrowser from "./Images/WebBrowserLogo.jpg"
+import webrowser from "./Images/WebBrowserLogo.png"
 
 const genres = [
     { name: "MMORPG", image: mmorpg },
@@ -47,11 +47,11 @@ function Home (){
     };
 
     const games30 = games.map(game => ({
-      ...game,title: `(30% OFF)`, image: game.thumbnail  
+      ...game,title: `30% OFF`, image: game.thumbnail  
     }));
 
     const games50 = games.map(game => ({
-      ...game,title: `(50% OFF)`,image: game.thumbnail  
+      ...game,title: `50% OFF`,image: game.thumbnail  
     }));
 
     const discountGame30 = getRandomGame(games30);
@@ -59,30 +59,33 @@ function Home (){
 
     return(
     <div>
-      <h2>Deals</h2>
-      <div className="discount-games">
-        {discountGame30 && (
-          <div className="discount-game" onClick={() => navigate('/deals')}>
-            <img src={discountGame30.image} alt={discountGame30.title} className="discount-game-image clickable"/>
-            <p>{discountGame30.title}</p>
-          </div>
-        )}
-        {discountGame50 && (
-          <div className="discount-game" onClick={() => navigate('/deals')}>
-            <img src={discountGame50.image} alt={discountGame50.title} className="discount-game-image clickable"/>
-            <p>{discountGame50.title}</p>
-          </div>
-        )}
-      </div> 
-
-      <h2>Platforms</h2>
-      <div className="Platforms">
-        {platforms.map((platform) => (
-          <PlatformCard key={platform.name} name={platform.name} image={platform.image} />
-        ))}
+      {/* <h2>Deals</h2> */}
+     <div className="both">
+        <div className="discount-games">
+         {discountGame30 && (
+            <div className="discount-game clickable" onClick={() => navigate('/deals')}>
+              <div className="discount-badge">30% SALE</div>
+              <img src={discountGame30.image} alt={discountGame30.title} className="discount-game-image" />
+              {/* <p>{discountGame30.title}</p> */}
+            </div>
+          )}
+          {discountGame50 && (
+            <div className="discount-game clickable" onClick={() => navigate('/deals')}>
+              <div className="discount-badge">50% SALE</div>
+              <img src={discountGame50.image} alt={discountGame50.title} className="discount-game-image" />
+              {/* <p>{discountGame50.title}</p> */}
+            </div>
+          )}
       </div>
 
-      <h2>Categories</h2>
+        <div className="Platforms">
+          {platforms.map((platform) => (
+            <PlatformCard key={platform.name} name={platform.name} image={platform.image} />
+          ))}
+        </div>
+      </div>
+
+      <h2 className="Category-title">CATEGORIES</h2>
       <div className="Genre">
         {genres.map((genre) => (
           <CategoryCard key={genre.name} name={genre.name} image={genre.image} />

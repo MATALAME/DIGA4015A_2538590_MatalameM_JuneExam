@@ -22,23 +22,34 @@ const PurchasePage = () => {
     .slice(0, 4);                    
 
   return (
-    <div> 
-      <div className="PurchasePage">
-        <h2>{game.title}</h2>
-        <img src={game.thumbnail} alt={game.title} />
-        <p><strong>Genre:</strong> {game.genre}</p>
-        <p><strong>Publisher:</strong> {game.publisher}</p>
-        <p><strong>Developer:</strong> {game.developer}</p>
-        <p><strong>Release Date:</strong> {game.release_date}</p>
-        <p><strong>Price:</strong> R{game.price}</p>
-        <p><strong>Description:</strong> {game.short_description}</p>
-        <button onClick={handlePay}>Pay</button> 
-        <p>*All game purchases are final, but refunds may be issued for technical issues or accidental purchases within 48 hours*</p>
+     <div className="purchase-container">
+      <div className="game-details">
+        <img src={game.thumbnail} alt={game.title} className="game-image" />
+
+        <div className="game-info">
+          <h1 className="game-title">{game.title}</h1>
+          <p className="game-desc">{game.short_description}</p>
+
+          <div className="game-meta">
+            <p><strong>Genre:</strong> {game.genre}</p>
+            <p><strong>Publisher:</strong> {game.publisher}</p>
+            <p><strong>Developer:</strong> {game.developer}</p>
+            <p><strong>Release Date:</strong> {game.release_date}</p>
+          </div>
+
+          <p className="game-price">R {game.price}</p>
+
+          <button onClick={handlePay} className="buy-button">BUY</button>
+
+          <p className="purchase-note">
+            * All game purchases are final, but refunds may be issued for technical issues or accidental purchases within 48 hours. *
+          </p>
+        </div>
       </div>
 
-      <div className='Suggested'>
+      <div className="suggested-section">
         <h2>Check out other games</h2>
-        <GameComp games={suggestedGames} />
+        <GameComp games={suggestedGames} variant="suggested" />
       </div>
     </div>
   );

@@ -1,23 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import './NavBarStyle.css'
+import { NavLink } from "react-router-dom";
+import './NavBarStyle.css';
 
-import logo from "../Images/RawGamesLogo.png"
+import logo from "../Images/RawGamesLogo.png";
 
-function NavBar (){
-    return(
-    <nav>
-        <div className="NavBar"> 
-        <img src={logo} alt="Raw Games" />
-        {/* <Link to="/">Landing</Link> */}
-        <Link to="/home">Home</Link>
-        {/* <Link to="signup">Sign Up</Link>  */}
-        <Link to="/games">Games</Link>
-        <Link to="/deals">Deals</Link>
-        <Link to="/profile">Profile</Link>
-        </div>
-    </nav>
-    )
+function NavBar() {
+    return (
+        <nav className="navbar">
+            <img src={logo} alt="Raw Games" className="navbar-logo" />
+            <div className="nav-links-container">
+                <NavLink to="/home" className="nav-link">Home</NavLink>
+                <NavLink to="/games" className="nav-link">Games</NavLink>
+                <NavLink to="/deals" className="nav-link">Deals</NavLink>
+                <NavLink to="/profile" className="nav-link">Profile</NavLink>
+                <div className="nav-highlight"></div>
+            </div>
+        </nav>
+    );
 }
 
-export default NavBar; 
+export default NavBar;
