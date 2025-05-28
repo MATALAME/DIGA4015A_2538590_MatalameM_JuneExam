@@ -92,8 +92,8 @@ function Home (){
         ))}
       </div>
 
-      <h2 className="All Games">All Games</h2>
-      <GameComp /> {/* All the games will appear here */}
+      <h2 className="All-games">All Games</h2>
+      <GameComp games={games.slice(0, 10)} /> {/* All the games will appear here */}
     </div>
   );
 }

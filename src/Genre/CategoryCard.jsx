@@ -12,7 +12,7 @@ const CategoryCard = ({ name, image }) => {
   return (
     <div className="category-card" onClick={handleClick}> 
       <img src={image} alt={name} className="category-image" /> 
-      <p>{name}</p>
+      <p className='category-name'>{name}</p>
     </div>
   );
 };

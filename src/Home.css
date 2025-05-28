@@ -11,10 +11,19 @@
   padding: 0 1rem;
 }
 
+.All-games {
+  max-width: 1500px;
+  margin-top: -40px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  font-family: "Raleway", sans-serif;
+}
+
 .Category-title{
   font-family: "Raleway", sans-serif;
+  font-size: 18px;
   text-align: center;
-  margin-bottom: 0;
+  margin-top: -30px;
 }
 
 .discount-games {

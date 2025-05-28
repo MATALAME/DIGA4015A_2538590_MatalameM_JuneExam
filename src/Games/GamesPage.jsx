@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useGameContext } from './GameContext';
 import GameComp from './GameComp';
+import "./GamesPage.css"
 
 const GamesPage = () => {
   const { games } = useGameContext();
@@ -8,7 +9,7 @@ const GamesPage = () => {
   const [selectedPlatform, setSelectedPlatform] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
 
-  const platforms = ['All', 'Playstation', 'XBOX', 'PC (Windows)', 'Web Browser'];
+  const platforms = ['All', 'Playstation', 'Xbox', 'PC Games', 'Web Browser'];
   const genres = ['All', 'MMORPG', 'Fighting', 'Shooter', 'Sports', 'Strategy', 'Racing'];
 
   const filteredGames = games.filter(game => {

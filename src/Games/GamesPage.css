@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.games-page {
+  margin-top: 20px;
+  padding: 0 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  justify-content: left;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+
+.filters select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #0033cc;
+  border-radius: 8px;
+  background-color: #343434;
+  color: #ffffff; 
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.filters select:hover {
+  border-color: #226A4D;
+  background-color: #eaf4ec;
+}
+
+.filters select:focus {
+  border-color: #0033cc; 
+  background-color: #343434;
+}

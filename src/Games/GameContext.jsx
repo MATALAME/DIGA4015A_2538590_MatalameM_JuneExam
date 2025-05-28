@@ -12,7 +12,7 @@ export const GameProvider = ({ children }) => {
       .then(res => res.json())
       .then(data => {
 
-        const platforms = ['Playstation', 'XBOX', 'PC Games', 'Web Browser']; 
+        const platforms = ['Playstation', 'Xbox', 'PC Games', 'Web Browser']; 
         //The API only had two platforms specifically "Web Browser" and "PC (Windows)" so I wanted to add different platforms and to also make them random.
         const additions = data.map(game => ({
           ...game,
