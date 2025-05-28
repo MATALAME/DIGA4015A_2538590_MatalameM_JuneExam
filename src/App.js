@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
+import "./App.css";
 import LandingPage from './SignUp/LandingPage';
 import Signup from './SignUp/Signup';
 import { GameProvider } from './Games/GameContext';
@@ -8,12 +9,11 @@ import Home from './Home';
 import CategoryPage from './Genre/CategoryPage';
 import PurchasePage from './Purchase/PurchasePage';
 import DealsPage from './Deals/DealsPage';
-import PaymentPage from './Purchase/PaymentPage';
+import PaymentPage from './Payment/PaymentPage';
 import PlatformPage from './Platfrom/PlatformPage';
 import GamesPage from './Games/GamesPage';
 import ProfilePage from './Profile/ProfilePage';
 import Scroll from './Technical/Scroll';
-import "./App.css";
 
 function App() {
   return (
@@ -34,7 +34,6 @@ function App() {
               <Route path="/pay/:id" element={<PaymentPage />} />
               <Route path="/games" element={<GamesPage />} />
               <Route path="/profile" element={<ProfilePage/>} />
-            
             </Routes>
         </BrowserRouter>
        </GameProvider>

@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import './NavBarStyle.css';
 
-import logo from "../Images/RawGamesLogo.png";
+import logo from "../Images/RawGamesLogoWhite.png";
 
 function NavBar() {
     return (

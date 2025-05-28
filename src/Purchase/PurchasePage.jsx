@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useGameContext } from '../Games/GameContext';
 import GameComp from '../Games/GameComp';
+import "./PurchasePage.css"
 
 const PurchasePage = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ const PurchasePage = () => {
 
   const suggestedGames = [...games] 
     .sort(() => 0.5 - Math.random())  //Once again. I randomized the games to not give repetitive results to the users. 
-    .slice(0, 4);                    
+    .slice(0, 5);                    
 
   return (
      <div className="purchase-container">
@@ -41,9 +42,7 @@ const PurchasePage = () => {
 
           <button onClick={handlePay} className="buy-button">BUY</button>
 
-          <p className="purchase-note">
-            * All game purchases are final, but refunds may be issued for technical issues or accidental purchases within 48 hours. *
-          </p>
+          <p className="purchase-note"> * All game purchases are final, but refunds may be issued for technical issues or accidental purchases within 48 hours. *</p>
         </div>
       </div>
 

@@ -23,12 +23,12 @@ const GameComp = ({ games: propGames }) => {
          <div key={game.id} className="game-card">
           <img src={game.thumbnail} alt={game.title} className="game-image" /> {/* dynamic alt text :)  */}
           <div className="game-info">
-            <h3>{game.title}</h3>
+            <h3 className='title'>{game.title}</h3>
             <p className="platform">{game.platform}</p>
             <p className="description">{game.short_description}</p>
-             <p className="price"><strong>Price:</strong> {game.price === 0 ? 'Free' : `R${game.price}`}</p>
             <div className="btn-container">
-              <button className="buy-btn" onClick={() => handleBuy(game.id)}>Buy</button>
+              <button className="buy-btn" onClick={() => handleBuy(game.id)}>BUY</button>
+              <p className="price"> {game.price === 0 ? 'Free' : `R${game.price}`}</p>
             </div>
           </div>
         </div>
