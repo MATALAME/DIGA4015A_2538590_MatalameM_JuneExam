@@ -1,6 +1,6 @@
 .Platforms {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 0.5rem;
   justify-items: center;
   align-items: center;
@@ -18,6 +18,19 @@
   padding: 0.5rem;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+
+.platform-cover-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.platform-cover-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  /* border-radius: 8px; */
 }
 
 .platform-image {

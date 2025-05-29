@@ -3,11 +3,24 @@ import { useParams } from 'react-router-dom';
 import GameComp from '../Games/GameComp';
 import { useGameContext } from '../Games/GameContext'; 
 
+import playstation from "../Images/PlaystationCover.jpg";
+import xbox from "../Images/XboxCover.jpg";
+import webrowser from "../Images/WebBrowserCover.jpg";
+import pcgames from "../Images/PCCover.jpg";
+
+const platformImages = {
+  playstation,
+  xbox,
+  webrowser,
+  pcgames,
+};
 
 const PlatformPage = () => {
 
   const { platform } = useParams();  
   const { games } = useGameContext(); 
+
+  const platformCover = platformImages[platform.toLowerCase()];
 
   const filteredGames = games.filter(game =>
     game.platform.toLowerCase() === platform.toLowerCase()
@@ -15,7 +28,10 @@ const PlatformPage = () => {
 
   return (
     <div>
-      <h2>{platform} Games</h2>
+      {/* <h2>{platform} Games</h2> */}
+      <div className="platform-cover-container">
+      <img src={platformCover} alt={`${platform} cover`} className="platform-cover-image" />
+      </div>
       <GameComp games={filteredGames} />
     </div>
   );
