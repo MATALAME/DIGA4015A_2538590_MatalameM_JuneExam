@@ -38,20 +38,22 @@ const PaymentPage = () => {
         <h2>Payment Details</h2>
         <p>Complete your purchase by providing your payment details.</p>
         <form className="payment-form">
+
           <label>Email Address</label>
-          <input type="email" required />
+          <input type="email" required placeholder=''/>
 
           <label>Card Holder</label>
-          <input type="text" required />
+          <input type="text" required placeholder=''/>
 
           <div className="card-info">
-            <div>
+             <div className="card-number">
               <label>Card Number</label>
-              <input type="text" required />
-            </div>
-            <div>
+              <input type="text" />
+             </div>
+
+            <div className="cvv">
               <label>CVV</label>
-              <input type="password" required />
+              <input type="password"/>
             </div>
           </div>
 
