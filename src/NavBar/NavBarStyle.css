@@ -30,6 +30,7 @@
   text-decoration: none;
   z-index: 2;
   transition: color 0.3s;
+  font-family: "Roboto", sans-serif;
 }
 
 .nav-link.active {

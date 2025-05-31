@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import "./LandingPage.css";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -16,16 +17,15 @@ function LandingPage() {
   }
 
   return (
-    <div className="LandPage">
-      <h1 >Start Play</h1>
+    <div className="landpage">
+      <h1 className='landpage-title' >START PLAY</h1>
 
-      <div className="LandPage-Btn">
-        <button onClick={handleSignUpLogin} className="Sign Up" >Sign-Up / Login </button>
-
-        <button onClick={handleSkip} className="Skip"> I'll sign up later </button>
+      <div className="landPage-buttons">
+        <button onClick={handleSignUpLogin} className="sign-up-btn" >SIGN UP/LOG IN </button>
+        <button onClick={handleSkip} className="skip-btn"> I'LL SIGN UP LATER </button>
       </div>
 
-      <p className="Terms and Conditions">
+      <p className="terms-and-conditions">
         By signing up or logging in, you agree to our Terms and Conditions and Privacy Policy. You consent to the collection and use of your data 
         in accordance with these policies. You must be at least 13 years old to use this application. 
       </p>

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.landpage {
+    justify-content: center;
+    text-align: center;
+}
+
+.landpage-title {
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+}
+
+.terms-and-conditions {
+   font-family: "Roboto", sans-serif;
+}
+
+.sign-up-btn {
+  margin-top: 20px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: #004AAD;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.sign-up-btn:hover {
+  background-color: #1a47c9;
+}
+
+.skip-btn {
+  margin-top: 20px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: #717F92;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.skip-btn:hover {
+  background-color: #4d5663;
+}

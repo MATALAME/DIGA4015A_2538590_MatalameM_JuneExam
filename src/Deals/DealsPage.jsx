@@ -7,7 +7,6 @@ import "./DealsStyle.css";
 const DealsPage = () => {
   const { games } = useGameContext();
 
-  
   // const randomFive = (list) => {
   //   const add = [...list];
   //   add.sort(() => Math.random() - 0.5); //Shuffles the copied list into a random order.

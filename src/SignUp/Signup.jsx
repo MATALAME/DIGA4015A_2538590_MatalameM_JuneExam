@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import "./Signup.css";
+
 import signup from '../Images/SignUp.jpg'
+
 
 function Signup() {
   const navigate = useNavigate();
@@ -30,45 +33,45 @@ function Signup() {
 
   return (
     <div className="signup-container">
+
       <div className="signup-box">
-        <h2 className="Title">Sign In</h2>
-        <p>{"A world of games is waiting for you"}</p>
+        <h2 className="signup-title">SIGN IN</h2>
+        <p className='signup-intro'>{"A world of games is waiting for you"}</p>
         <form onSubmit={handleSubmit} className="signup-form">
             
           <div className="form-group">
-            <label className="form-label">Email</label>
+            <label className="form-label">EMAIL</label>
             <input
               type="email"
               className="form-input"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               required
-            />
-          </div>
+            /></div>
 
           <div className="form-group">
-            <label className="form-label">Password</label>
+            <label className="form-label">PASSWORD</label>
             <input
               type="password"
               className="form-input"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
               required
-            />
+            /></div>
 
-          </div>
           {error && <p className="form-error">{error}</p>}
           <button type="submit" className="submit-button">
             Sign In
           </button>
         </form>
+
+          <footer className="signup-footer">
+            © 2025 Raw Games. All rights reserved.
+          </footer>
       </div>
-
-      <img src = {signup}></img>
-
-      <footer className="signup-footer">
-        © 2025 Raw Games. All rights reserved.
-      </footer>
+        <div class="signup-image-container">
+        <img src = {signup} alt = {"Person playing Playstation"} className="sign-up-image"/>
+      </div>
     </div>
   );
 }
