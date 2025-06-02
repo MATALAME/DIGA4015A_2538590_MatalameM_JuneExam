@@ -1,23 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 .Platforms {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  gap: 0.5rem;
+  gap: 0rem;
   justify-items: center;
   align-items: center;
-  max-width: 400px;
+  max-width: 300px;
   margin: 1rem auto;
 }
 
 .platform-card {
-  width: 120px;
+  width: 5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.3rem;
   cursor: pointer;
   transition: transform 0.2s ease;
+}
+
+.platform-card p {
+   font-family: "Roboto", sans-serif;
+   font-size: 500;
 }
 
 .platform-cover-container {

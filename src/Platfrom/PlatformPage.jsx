@@ -11,8 +11,8 @@ import pcgames from "../Images/PCCover.jpg";
 const platformImages = {
   playstation,
   xbox,
-  webrowser,
-  pcgames,
+ 'pc games': pcgames,        // My platformImages was failing for "PC Games" and "Web Browser" because platform.toLowerCase() includes spaces,
+  'web browser': webrowser,  // but my image keys here didn't. I fixed it by updating the keys to include the correct strings with spaces.  
 };
 
 const PlatformPage = () => {

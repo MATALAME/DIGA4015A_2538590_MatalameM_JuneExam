@@ -14,6 +14,7 @@ import PlatformPage from './Platfrom/PlatformPage';
 import GamesPage from './Games/GamesPage';
 import ProfilePage from './Profile/ProfilePage';
 import Scroll from './Technical/Scroll';
+import Download from './Payment/Download';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               <Route path="/pay/:id" element={<PaymentPage />} />
               <Route path="/games" element={<GamesPage />} />
               <Route path="/profile" element={<ProfilePage/>} />
+              <Route path="/download" element={<Download />} />
             </Routes>
         </BrowserRouter>
        </GameProvider>

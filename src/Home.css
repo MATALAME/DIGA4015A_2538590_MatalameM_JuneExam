@@ -5,8 +5,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
-  gap: 0.5rem;
+  align-items: center;
+  /* gap: 0.5rem; */
   margin: 1rem auto; 
   padding: 0 1rem;
 }
@@ -23,7 +23,7 @@
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   text-align: center;
-  margin-top: -30px;
+  margin-top: 0rem;
 }
 
 .discount-games {
@@ -55,9 +55,9 @@
 }
 
 .discount-game-image {
-  width: 500px;
+  width: 35rem;
   border-radius: 20px;
-  height: 220px;
+  height: 15rem;
 }
 
 .discount-game p {

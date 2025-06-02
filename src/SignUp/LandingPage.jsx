@@ -2,6 +2,10 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
 
+import icon from "../Images/PlayIcon.png"
+import gamepad from "../Images/Gamepad.png"
+import controller from "../Images/Controller.png"
+
 function LandingPage() {
   const navigate = useNavigate();
 
@@ -18,17 +22,26 @@ function LandingPage() {
 
   return (
     <div className="landpage">
-      <h1 className='landpage-title' >START PLAY</h1>
+      <div className='landpage-title'>
+        <img src = {icon} alt = {"Play Icon"} className="landpage-image"/>
+        <h1 className='landpage-heading' >START PLAY</h1>
+      </div> 
 
       <div className="landPage-buttons">
         <button onClick={handleSignUpLogin} className="sign-up-btn" >SIGN UP/LOG IN </button>
         <button onClick={handleSkip} className="skip-btn"> I'LL SIGN UP LATER </button>
       </div>
 
-      <p className="terms-and-conditions">
-        By signing up or logging in, you agree to our Terms and Conditions and Privacy Policy. You consent to the collection and use of your data 
-        in accordance with these policies. You must be at least 13 years old to use this application. 
-      </p>
+      <div className="terms-and-conditions">
+        <p>By signing up or logging in, you agree to our Terms and Conditions and Privacy Policy.</p>
+        <p>You consent to the collection and use of your data in accordance with these policies.</p>
+        <p>You must be at least 13 years old to use this application. </p>
+      </div>
+
+      <div className='design-images'>
+        <img src = {gamepad} alt = {"Gamepad Icon"} className="design-image"/>
+        <img src = {controller} alt = {"Controller Icon"} className="design-image"/>
+      </div>
     </div>
   );
 }

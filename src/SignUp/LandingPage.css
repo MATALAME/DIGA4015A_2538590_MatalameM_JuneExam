@@ -2,17 +2,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .landpage {
-    justify-content: center;
-    text-align: center;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  padding: 1rem; 
+  box-sizing: border-box;
 }
 
 .landpage-title {
-    justify-content: center;
-    font-family: "Raleway", sans-serif;
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.landpage-heading {
+  font-family: "Raleway", sans-serif;
+}
+
+.landpage-image {
+  max-width: 4.3rem;
+  max-height: 4.3rem;
+}
+
+.landPage-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.design-images{
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  gap: 45rem;
+  opacity: 0.2; 
+  pointer-events: none; 
+}
+
+.design-image {
+  width: 40rem;
+  height: auto;
 }
 
 .terms-and-conditions {
-   font-family: "Roboto", sans-serif;
+  margin-top: 2rem;
+}
+
+.terms-and-conditions p {
+  font-family: "Roboto", sans-serif;
 }
 
 .sign-up-btn {
@@ -25,6 +64,8 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 .sign-up-btn:hover {
@@ -41,6 +82,8 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 .skip-btn:hover {

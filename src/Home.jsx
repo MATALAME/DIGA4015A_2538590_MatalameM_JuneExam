@@ -93,7 +93,7 @@ function Home (){
       </div>
 
       <h2 className="All-games">All Games</h2>
-      <GameComp games={games.slice(0, 10)} /> {/* All the games will appear here */}
+      <GameComp games={[...games].sort(() => 0.5 - Math.random()).slice(0, 10)} />
     </div>
   );
 }
