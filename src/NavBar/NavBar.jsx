@@ -19,7 +19,6 @@ function NavBar() {
         <NavLink to="/games" className="nav-link">Games</NavLink>
         <NavLink to="/deals" className="nav-link">Deals</NavLink>
         <NavLink to="/profile" className="nav-link">Profile</NavLink>
-        <div className="nav-highlight"></div>
       </div>
     </nav>
   );

@@ -3,8 +3,11 @@
 .navbar {
   display: flex;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #121217;
+  background-color: #0f0f1a;
+  padding: 1rem;
+  margin-left: 2rem;
+  gap:4rem;
+  margin-top: 1rem;
 }
 
 .navbar-logo {
@@ -13,44 +16,24 @@
 }
 
 .nav-links-container {
-  position: relative;
   display: flex;
-  background-color: #eae9e6;
-  border-radius: 9999px;
+  background-color: #333;
+  border-radius: 90rem;
   padding: 0.25rem;
   gap: 1rem;
 }
 
 .nav-link {
-  position: relative;
-  padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
-  font-weight: 500;
-  color: #171A1B;
+  color: white;
   text-decoration: none;
-  z-index: 2;
-  transition: color 0.3s;
+  padding: 0.5rem 1.5rem;
+  border-radius: 90rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
   font-family: "Roboto", sans-serif;
 }
 
 .nav-link.active {
-  font-weight: bold;
-}
-
-.nav-highlight {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  background-color: white;
-  border-radius: 9999px;
-  transition: all 0.3s ease;
-  z-index: 1;
-}
-
-
-.nav-links-container .nav-link.active ~ .nav-highlight {
-  width: 80px; 
-  transform: translateX(calc(var(--active-index, 0) * 100%));
+  background-color: black;
+  color: white;
 }
