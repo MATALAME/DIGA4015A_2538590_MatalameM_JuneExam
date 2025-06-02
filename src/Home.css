@@ -95,3 +95,23 @@
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+.app-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 1rem
+}
+
+.social-media-icon {
+  max-width: 4rem;
+  max-height: auto;
+  cursor: pointer;
+}
+
+.copyright {
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+

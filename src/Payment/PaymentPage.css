@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 .payment-container {
   display: flex;
   flex-wrap: wrap;
@@ -10,8 +13,7 @@
   margin: 0 auto;
 }
 
-.summary-section,
-.form-section {
+.summary-section,.form-section {
   flex: 1 1 400px;
   min-width: 350px;
 }
@@ -37,6 +39,7 @@
 
 .game-summary-details h3, .game-summary-details p {
   margin: 0;
+  margin-top: 0;
 }
 
 /* .form-section {
@@ -105,12 +108,14 @@
   margin-top: 20px;
   padding: 10px;
   font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 500;
   background-color: #2156f2;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
   width: 100%;
 }
 

@@ -25,7 +25,6 @@ const PaymentPage = () => {
   
   return (
     <div className="payment-container">
-      {/* LEFT: Order Summary */}
       <div className="summary-section">
         <h2>Summary Order</h2>
         <p>Check your order and select your payment method</p>
@@ -39,7 +38,6 @@ const PaymentPage = () => {
         </div>
       </div>
 
-      {/* RIGHT: Payment Form */}
       <div className="form-section">
         <h2>Payment Details</h2>
         <p>Complete your purchase by providing your payment details.</p>
