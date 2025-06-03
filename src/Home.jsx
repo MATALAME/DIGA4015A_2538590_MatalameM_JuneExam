@@ -92,9 +92,9 @@ function Home (){
         ))}
       </div>
 
-      <h2 className="All-games">ALL GAMES</h2>
+      <h2 className="All-games">NEW GAMES</h2>
       <GameComp games={[...games].sort(() => 0.5 - Math.random()).slice(0, 10)} />
-
+      
         <footer className="app-footer">
           <img src={youtube} alt="Youtube Icon" className="social-media-icon" onClick={() => window.open("https://www.youtube.com/@T5G", "_blank")}/>
           <img src={facebook} alt="Facebook Icon" className="social-media-icon" onClick={() => window.open("https://www.facebook.com/ign/", "_blank")} />
