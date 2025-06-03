@@ -81,11 +81,78 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
 .skip-btn:hover {
   background-color: #4d5663;
+}
+
+.cors-text {
+  color: #1a47c9;
+}
+
+@media (max-width: 767px) {
+  .landpage-heading {
+    font-size: 1.8rem;
+  }
+
+  .landpage-image {
+    max-width: 3rem;
+    max-height: 3rem;
+  }
+
+  .design-images {
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .design-image {
+    width: 20rem;
+  }
+
+  .landPage-buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .sign-up-btn,
+  .skip-btn {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .landpage-heading {
+    font-size: 2.2rem;
+  }
+
+  .landpage-image {
+    max-width: 3.5rem;
+    max-height: 3.5rem;
+  }
+
+  .design-images {
+    gap: 8rem;
+  }
+
+  .design-image {
+    width: 28rem;
+  }
+
+  .landPage-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sign-up-btn,
+  .skip-btn {
+    width: auto;
+    min-width: 200px;
+  }
 }

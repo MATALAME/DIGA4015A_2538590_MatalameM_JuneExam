@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .sign-up-image {
-  height: 41rem;
+  height: 46rem;
   width: auto;
   object-fit: cover;
   display: block;
-  align-self: flex-end; 
+  align-self: flex-end;
 }
 
 .signup-container {
@@ -23,7 +23,6 @@
   padding: 4rem;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
 }
 
 .signup-title {
@@ -81,32 +80,71 @@
   background-color: #1a47c9;
 }
 
-.signup-footer{
-    margin-top: 2rem;
-    text-align: center;
+.signup-footer {
+  margin-top: 2rem;
+  text-align: center;
+  /* justify-content: center; */
 }
 
-@media (max-width: 768px) {
+.form-error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+
+@media (max-width: 767px) {
   .signup-container {
     flex-direction: column;
+    height: auto;
     padding: 1rem;
   }
 
   .sign-up-image {
-    height: auto;
     width: 100%;
+    height: 16rem;
+    object-fit: cover;
+    align-self: center;
   }
 
   .signup-box {
     margin-left: 0;
+    padding: 2rem 1rem;
+  }
+
+  .signup-title {
+    font-size: 2rem;
+  }
+
+  .signup-intro {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .signup-container {
+    flex-direction: column;
+    height: auto;
     padding: 2rem;
   }
 
-  .title {
-    font-size: 2.2rem;
+  .sign-up-image {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    align-self: center;
   }
 
-  .intro {
-    font-size: 0.95rem;
+  .signup-box {
+    margin-left: 0;
+    padding: 3rem 2rem;
+  }
+
+  .signup-title {
+    font-size: 2.5rem;
+  }
+
+  .signup-intro {
+    font-size: 1rem;
   }
 }

@@ -26,7 +26,6 @@ import youtube from "./Images/Youtube.png";
 import facebook from "./Images/Facebook.png";
 import instagram from "./Images/Instagram.png";
 
-
 const genres = [
     { name: "MMORPG", image: mmorpg },
     { name: "Fighting", image: fighting },
@@ -52,13 +51,8 @@ function Home (){
       return list[randomIndex];
     };
 
-    const games30 = games.map(game => ({
-      ...game,title: `30% OFF`, image: game.thumbnail  
-    }));
-
-    const games50 = games.map(game => ({
-      ...game,title: `50% OFF`,image: game.thumbnail  
-    }));
+    const games30 = games.map(game => ({...game,title: `30% OFF`, image: game.thumbnail }));
+    const games50 = games.map(game => ({...game,title: `50% OFF`,image: game.thumbnail  }));
 
     const discountGame30 = getRandomGame(games30);
     const discountGame50 = getRandomGame(games50);
@@ -69,14 +63,14 @@ function Home (){
      <div className="both">
         <div className="discount-games">
          {discountGame30 && (
-            <div className="discount-game clickable" onClick={() => navigate('/deals')}>
+            <div className="discount-game button" onClick={() => navigate('/deals')}>
               <div className="discount-badge">30% SALE</div>
               <img src={discountGame30.image} alt={discountGame30.title} className="discount-game-image" />
               {/* <p>{discountGame30.title}</p> */}
             </div>
           )}
           {discountGame50 && (
-            <div className="discount-game clickable" onClick={() => navigate('/deals')}>
+            <div className="discount-game button" onClick={() => navigate('/deals')}>
               <div className="discount-badge">50% SALE</div>
               <img src={discountGame50.image} alt={discountGame50.title} className="discount-game-image" />
               {/* <p>{discountGame50.title}</p> */}
@@ -98,7 +92,7 @@ function Home (){
         ))}
       </div>
 
-      <h2 className="All-games">All Games</h2>
+      <h2 className="All-games">ALL GAMES</h2>
       <GameComp games={[...games].sort(() => 0.5 - Math.random()).slice(0, 10)} />
 
         <footer className="app-footer">

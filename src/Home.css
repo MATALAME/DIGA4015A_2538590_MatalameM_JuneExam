@@ -6,22 +6,24 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* gap: 0.5rem; */
+  gap: 0.5rem; 
   margin: 1rem auto; 
   padding: 0 1rem;
+  margin-top: 0;
 }
 
 .All-games {
   max-width: 1500px;
-  margin-top: -40px;
-  margin-bottom: 10px;
-  margin-left: 40px;
+  margin-top: -2rem;
+  margin-bottom: 0.8rem;
+  margin-left: 1.8rem;
   font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
 }
 
 .Category-title{
   font-family: "Raleway", sans-serif;
-  font-size: 18px;
+  font-size: 1.2rem;
   text-align: center;
   margin-top: 0rem;
 }
@@ -56,8 +58,12 @@
 
 .discount-game-image {
   width: 35rem;
-  border-radius: 20px;
-  height: 15rem;
+  border-radius: 1.3rem;
+  height: 14rem;
+}
+
+.discount-game-image:hover {
+box-shadow: 0 4px 10px rgba(0, 30, 197, 0.827);
 }
 
 .discount-game p {
@@ -86,14 +92,13 @@
   border-radius: 10px;
 }
 
-.clickable {
+.button {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.clickable:hover {
+.button:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .app-footer {

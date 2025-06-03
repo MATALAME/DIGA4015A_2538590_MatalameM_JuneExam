@@ -8,46 +8,61 @@ import signup from '../Images/SignUp.jpg'
 function Signup() {
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState(''); // State for storing the user's email input
-  const [password, setPassword] = useState(''); // State for storing the user's password input
-  const [error, setError] = useState('');   // State for storing any error message related to email validation
+  const [email, setEmail] = useState(''); 
+  const [password, setPassword] = useState('');
+  const [emailError, setEmailError] = useState('');   // State for storing any error message related to email validation
+  const [passwordError, setPasswordError] = useState('');
 
   const allowedDomains = ['@gmail.com', '@outlook.com', '@icloud.com', '@yahoo.com', '@hotmail.com']; 
   // Due to time, I couldn't really work with backend so I just made the code accept these domains above. I took the code from my final exam last year which contained a purchasing page.
   
 
   const handleSubmit = (event) => {    
+    event.preventDefault()  //A standard HTML5 tooltip kept appearing which was affecting my code for the '<p> error' I wanted to display so I had to add this line to remove that default tooltip.
 
-    const isValid = allowedDomains.some(domain => email.endsWith(domain)); 
-
-    // The 'some' method is used to check if at least one element in the array matches what the user puts in the field. 
-
-    if (!isValid) {  // If the email does not show the right domain, this error will appear 
-      setError('Incorrect email, email should contain proper domain');
+     const isEmailValid = allowedDomains.some(domain => email.endsWith(domain)); // The 'some' method is used to check if at least one element in the array matches what the user puts in the field. 
+    if (!isEmailValid) {
+      setEmailError('Email must end with a valid domain like @gmail.com');
+      return;
     } else {
-      setError(''); 
-      navigate('/Home');
+      setEmailError('');
     }
-  };
 
+    if (password.length < 8) {   
+      setPasswordError('Password must be at least 8 characters long');
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {       //This was something new to learn, this checks if at least one of the characters filled in by the user is a capital letter.
+      setPasswordError('Password must include at least one capital letter');
+      return;
+    }
+    if (!/[0-9]/.test(password)) {       //This one checks whether the password contains at least one number.
+      setPasswordError('Password must include at least one number');
+      return;
+    }
+
+    setPasswordError('');
+    navigate('/Home');
+  };
 
   return (
     <div className="signup-container">
-
       <div className="signup-box">
         <h2 className="signup-title">SIGN IN</h2>
-        <p className='signup-intro'>{"A world of games is waiting for you"}</p>
+        <p className="signup-intro">A world of games is waiting for you</p>
+
         <form onSubmit={handleSubmit} className="signup-form">
-            
           <div className="form-group">
             <label className="form-label">EMAIL</label>
             <input
-              type="email"
+              type="text"
               className="form-input"
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               required
-            /></div>
+            />
+            {emailError && <p className="form-error">{emailError}</p>}
+          </div>
 
           <div className="form-group">
             <label className="form-label">PASSWORD</label>
@@ -57,20 +72,22 @@ function Signup() {
               value={password}
               onChange={(event) => setPassword(event.target.value)}
               required
-            /></div>
+            />
+            {passwordError && <p className="form-error">{passwordError}</p>}
+          </div>
 
-          {error && <p className="form-error">{error}</p>}
           <button type="submit" className="submit-button">
             Sign In
           </button>
         </form>
 
-          <footer className="signup-footer">
-            © 2025 Raw Games. All rights reserved.
-          </footer>
+        <footer className="signup-footer">
+          © 2025 Raw Games. All rights reserved.
+        </footer>
       </div>
-        <div class="signup-image-container">
-        <img src = {signup} alt = {"Person playing Playstation"} className="sign-up-image"/>
+
+      <div className="signup-image-container">
+        <img src={signup} alt="Person playing Playstation" className="sign-up-image" />
       </div>
     </div>
   );

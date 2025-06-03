@@ -36,6 +36,7 @@ function LandingPage() {
         <p>By signing up or logging in, you agree to our Terms and Conditions and Privacy Policy.</p>
         <p>You consent to the collection and use of your data in accordance with these policies.</p>
         <p>You must be at least 13 years old to use this application. </p>
+        <p className='cors-text'><strong>Please Install CORS Extension on Chrome for API to work!</strong></p>
       </div>
 
       <div className='design-images'>
