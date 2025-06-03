@@ -101,6 +101,11 @@ box-shadow: 0 4px 10px rgba(0, 30, 197, 0.827);
   transform: scale(1.05);
 }
 
+.explore-page {
+  margin-top: 2rem;
+  width: 100%;
+}
+
 .app-footer {
   display: flex;
   justify-content: center;
@@ -120,5 +125,63 @@ box-shadow: 0 4px 10px rgba(0, 30, 197, 0.827);
   font-size: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+  .All-games,
+  .Category-title {
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .discount-game-image {
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+
+  .discount-badge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .card {
+    width: 150px;
+  }
+
+  .social-media-icon {
+    max-width: 3rem;
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .All-games,
+  .Category-title {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-left: 1rem;
+  }
+
+  .discount-game-image {
+    width: 28rem;
+    height: 12rem;
+  }
+
+  .discount-badge {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    width: 170px;
+  }
+
+  .social-media-icon {
+    max-width: 3.5rem;
+  }
 }
 

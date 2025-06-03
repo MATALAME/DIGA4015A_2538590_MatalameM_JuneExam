@@ -3,7 +3,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  background-color: #0f0f1a;
+  background-color: #121217;
   padding: 1rem;
   margin-left: 2rem;
   gap:4rem;
@@ -36,4 +36,61 @@
 .nav-link.active {
   background-color: black;
   color: white;
+}
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links-container {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    background-color: #333;
+    border-radius: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 1000;
+    width: 80%;
+  }
+
+  .nav-links-container.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    width: 2rem;
+    margin-right: 0;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-links-container {
+    display: flex;
+  }
 }
