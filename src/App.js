@@ -15,11 +15,13 @@ import GamesPage from './Games/GamesPage';
 import ProfilePage from './Profile/ProfilePage';
 import Scroll from './Technical/Scroll';
 import Download from './Payment/Download';
+import { UserProvider } from './SignUp/UserContext';
 
 function App() {
   return (
     <div className="App">
-
+      
+  <UserProvider>
       <GameProvider>
         <BrowserRouter>
           <NavBar/>
@@ -39,7 +41,7 @@ function App() {
             </Routes>
         </BrowserRouter>
        </GameProvider>
-
+  </UserProvider>
     </div>
   );
 }

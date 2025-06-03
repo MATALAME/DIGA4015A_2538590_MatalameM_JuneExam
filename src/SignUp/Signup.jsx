@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Signup.css";
+import { useInfo } from '../SignUp/UserContext';
 
 import signup from '../Images/SignUp.jpg'
 
 
 function Signup() {
   const navigate = useNavigate();
+  const { setUserData } = useInfo();
+
+  const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
 
   const [email, setEmail] = useState(''); 
   const [password, setPassword] = useState('');
@@ -42,6 +47,12 @@ function Signup() {
     }
 
     setPasswordError('');
+
+    setUserData({
+  name: name,
+  surname: surname,
+  email: email,
+});
     navigate('/Home');
   };
 
@@ -52,6 +63,28 @@ function Signup() {
         <p className="signup-intro">A world of games is waiting for you</p>
 
         <form onSubmit={handleSubmit} className="signup-form">
+          <div className="form-group">
+            <label className="form-label">NAME</label>
+            <input
+              type="text"
+              className="form-input"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label className="form-label">SURNAME</label>
+            <input
+              type="text"
+              className="form-input"
+              value={surname}
+              onChange={(event) => setSurname(event.target.value)}
+              required
+            />
+          </div>
+
           <div className="form-group">
             <label className="form-label">EMAIL</label>
             <input
