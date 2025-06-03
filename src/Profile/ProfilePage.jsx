@@ -7,6 +7,7 @@ function ProfilePage (){
     return(
         <div>
     <div className ="user-info">
+    <h2> Account </h2>
       <p>{userData.name}</p>
       <p>User: {userData.email}</p>
     </div>

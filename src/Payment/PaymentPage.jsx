@@ -3,6 +3,10 @@ import { useParams, useNavigate  } from 'react-router-dom';
 import { useGameContext } from '../Games/GameContext';
 import "./PaymentPage.css"
 
+import apple from "../Images/ApplePay.png";
+import capitec from "../Images/CapitecPay.png";
+import visa from "../Images/Visa.png";
+
 const PaymentPage = () => {
   const { id } = useParams();
   const { games } = useGameContext();
@@ -36,6 +40,13 @@ const PaymentPage = () => {
             <p><strong>R{game.price}</strong></p>
           </div>
         </div>
+
+        <div className='payment-options'>
+          <img src={apple} alt= "Apple Pay Logo" className='apple-pay'/>
+          <img src={capitec} alt= "Capitec Pay Logo" className='capitec-pay'/>
+          <img src={visa} alt= "Visa and Mastercard Logo" className='visa-pay'/>
+      </div>
+        <p className='secure-text'>Secure & Trusted Payment Methods</p>
       </div>
 
       <div className="form-section">

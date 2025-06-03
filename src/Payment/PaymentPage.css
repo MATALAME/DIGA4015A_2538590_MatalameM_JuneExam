@@ -49,6 +49,32 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 } */
 
+.payment-options {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 10rem;
+}
+
+.apple-pay {
+  max-height: 4rem;
+  max-width: auto;
+}
+
+.capitec-pay {
+  max-height: 4rem;
+  max-width: auto;
+}
+
+.visa-pay {
+  max-height: 4rem;
+  max-width: auto;
+}
+
+.secure-text {
+  color: #575757;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
 .payment-form {
   display: flex;
   flex-direction: column;
@@ -121,4 +147,64 @@
 
 .pay-button:hover {
   background-color: #1a47c9;
+}
+
+@media (max-width: 767px) {
+  .payment-container {
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .summary-section, .form-section {
+    min-width: 100%;
+  }
+
+  .game-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-summary img {
+    width: 100%;
+  }
+
+  .payment-options {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .card-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .pay-button {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .payment-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .summary-section, .form-section {
+    min-width: 100%;
+  }
+
+  .game-summary img {
+    width: 45%;
+  }
+
+  .payment-options {
+    margin-top: 4rem;
+  }
+
+  .card-info {
+    flex-direction: row;
+    gap: 20px;
+  }
 }

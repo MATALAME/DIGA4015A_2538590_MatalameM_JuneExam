@@ -15,11 +15,15 @@
   background: #313132;
   max-height: 500px;        
   border-radius: 1rem;   
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.1);  */
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
+}
+
+.game-card:hover {
+ box-shadow: 0 4px 15px rgba(255, 255, 255, 0.256); 
 }
 
 .game-card:hover {

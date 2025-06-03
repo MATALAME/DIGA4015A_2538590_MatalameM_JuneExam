@@ -2,10 +2,12 @@
 
 .deals-heading{
     margin-left: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .deal-title{
     margin-left: 2rem;
+    margin-bottom: 0;
 }
 
 .deal-container {

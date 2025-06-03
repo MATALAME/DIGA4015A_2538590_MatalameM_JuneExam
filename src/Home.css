@@ -63,7 +63,7 @@
 }
 
 .discount-game-image:hover {
-box-shadow: 0 4px 10px rgba(0, 30, 197, 0.827);
+ box-shadow: 0 4px 15px rgba(255, 255, 255, 0.256); 
 }
 
 .discount-game p {

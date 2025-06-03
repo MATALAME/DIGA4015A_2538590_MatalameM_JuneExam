@@ -9,12 +9,12 @@ const GamesPage = () => {
   const [selectedPlatform, setSelectedPlatform] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
 
-  const platforms = ['All', 'Playstation', 'Xbox', 'PC Games', 'Web Browser'];
-  const genres = ['All', 'MMORPG', 'Fighting', 'Shooter', 'Sports', 'Strategy', 'Racing'];
+  const platforms = ['All Platforms', 'Playstation', 'Xbox', 'PC Games', 'Web Browser'];
+  const genres = ['All Genres', 'MMORPG', 'Fighting', 'Shooter', 'Sports', 'Strategy', 'Racing'];
 
   const filteredGames = games.filter(game => {
-    const matchesPlatform = selectedPlatform === 'All' || selectedPlatform === '' || game.platform === selectedPlatform;
-    const matchesGenre = selectedGenre === 'All' || selectedGenre === '' || game.genre === selectedGenre;
+    const matchesPlatform = selectedPlatform === 'All Platforms' || selectedPlatform === '' || game.platform === selectedPlatform;
+    const matchesGenre = selectedGenre === 'All Genres' || selectedGenre === '' || game.genre === selectedGenre;
 
     return matchesPlatform && matchesGenre;
   });
