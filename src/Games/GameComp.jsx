@@ -27,8 +27,8 @@ const GameComp = ({ games: propGames }) => {
             <p className="platform">{game.platform}</p>
             <p className="description">{game.short_description}</p>
             <div className="btn-container">
-              <button className="buy-btn" onClick={() => handleBuy(game.id)}>BUY</button>
               <p className="price"> {game.price === 0 ? 'Free' : `R${game.price}`}</p>
+              <button className="buy-btn" onClick={() => handleBuy(game.id)}>BUY</button>
             </div>
           </div>
         </div>

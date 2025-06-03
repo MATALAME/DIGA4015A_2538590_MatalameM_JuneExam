@@ -59,7 +59,7 @@
 .description {
   font-size: 0.85rem;
   color: #ffffff;
-  height: 3em;               
+  height: 2.5em;               
   overflow: hidden;
   text-overflow: ellipsis;
   font-family: "Roboto", sans-serif;
@@ -125,7 +125,7 @@
   }
 
   .title {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .platform {
@@ -156,23 +156,27 @@
   }
 
   .title {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
+  }
+
+  .platform {
+    font-size:1rem;
   }
 
   .description {
-    font-size: 0.7rem;
+    font-size: 1rem;
     height: 2.3em;
   }
 
   .buy-btn {
-    padding: 0.25rem 1rem;
-    font-size: 0.7rem;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
     width: 100%;
     text-align: center;
   }
 
   .price {
-    font-size: 0.95rem;
+    font-size: 1.3rem;
   }
 
   .btn-container {

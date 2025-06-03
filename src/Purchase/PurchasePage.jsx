@@ -23,15 +23,16 @@ const PurchasePage = () => {
     .slice(0, 5);                    
 
   return (
-     <div className="purchase-container">
+    <div className='purchase-page'>
+    <div className="purchase-container">
       <div className="game-details">
         <img src={game.thumbnail} alt={game.title} className="game-image" />
 
         <div className="game-info">
           <h1 className="game-title">{game.title}</h1>
-          <p className="game-desc">{game.short_description}</p>
+          <p className="game-description">{game.short_description}</p>
 
-          <div className="game-meta">
+          <div className="game-more-info"> 
             <p><strong>Genre:</strong> {game.genre}</p>
             <p><strong>Publisher:</strong> {game.publisher}</p>
             <p><strong>Developer:</strong> {game.developer}</p>
@@ -45,12 +46,15 @@ const PurchasePage = () => {
           <p className="purchase-note"> * All game purchases are final, but refunds may be issued for technical issues or accidental purchases within 48 hours. *</p>
         </div>
       </div>
+    </div>
+
+    <h2 className='suggested-heading'>Check out other games</h2>
 
       <div className="suggested-section">
-        <h2>Check out other games</h2>
         <GameComp games={suggestedGames} variant="suggested" />
       </div>
     </div>
+    
   );
 };
 

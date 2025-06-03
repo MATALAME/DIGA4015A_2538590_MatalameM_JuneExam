@@ -16,7 +16,6 @@
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   padding: 30px;
-  margin-bottom: 60px;
 }
 
 .game-image {
@@ -41,13 +40,13 @@
   margin-bottom: 10px;
 }
 
-.game-desc {
+.game-description {
   font-size: 16px;
   margin-bottom: 20px;
   color: #f3f3f3;
 }
 
-.game-meta p {
+.game-more-info p {
   margin: 6px 0;
   font-size: 14px;
   color: #f3f3f3;
@@ -60,19 +59,19 @@
 }
 
 .buy-button {
-  background-color: #366CC2;
+  background-color: #0033cc;
   color: white;
-  padding: 12px 24px;
+  padding: 12px 60px;
   border: none;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1.2rem;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .buy-button:hover {
-  background-color: #2b57a4;
+  background-color: #001f99;
 }
 
 .purchase-note {
@@ -81,19 +80,86 @@
   margin-top: 15px;
 }
 
-.suggested-section {
-  margin-top: -20px;
-}
-
-.suggested-section h2 {
+.suggested-heading {
   font-size: 22px;
   font-weight: bold;
+  margin-top: 0;
+  text-align: center;
   margin-bottom: 20px;
-} */
+} 
+
+.suggested-section {
+   width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
 
 .loading-msg {
   text-align: center;
   margin-top: 50px;
   font-size: 18px;
   color: #666;
+}
+
+@media (max-width: 767px) {
+  .game-details {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .game-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .game-desc,
+  .game-more-info p,
+  .game-price {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .buy-button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+
+  .game-image {
+    max-height: 250px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .game-details {
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .game-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .game-description,
+  .game-more-info p,
+  .game-price {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .buy-button {
+    width: 60%;
+    font-size: 1.1rem;
+    padding: 12px 0;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .game-image {
+    max-height: 300px;
+  }
 }
