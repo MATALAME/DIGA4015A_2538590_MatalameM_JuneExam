@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
+import { useInfo } from "../SignUp/UserContext";
 
 import icon from "../Images/PlayIcon.png"
 import gamepad from "../Images/Gamepad.png"
@@ -8,6 +9,7 @@ import controller from "../Images/Controller.png"
 
 function LandingPage() {
   const navigate = useNavigate();
+  const { setUserData } = useInfo();
 
   function handleSignUpLogin() {
     navigate("/Signup");
@@ -15,6 +17,7 @@ function LandingPage() {
   }
 
   function handleSkip() {
+    setUserData({ name: 'Not signed in', email: '' });  //The local storage kept showing the previous input even when a user would choose to skip, so I had to ensure that it states that the user isnt signed in when theu prefer to skip
     navigate ("/Home");
     //console.log("Proceed without signing up");
 

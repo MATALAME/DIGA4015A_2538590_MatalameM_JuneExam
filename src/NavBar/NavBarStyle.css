@@ -45,6 +45,9 @@
   margin-right: 6rem;
   align-items: center;
   font-family: "Roboto", sans-serif;
+  background-color: #333;
+  padding: 0px 2rem;
+  border-radius: 1.8rem;
 }
 
 .nav-user-icon {
@@ -89,6 +92,11 @@
     display: flex;
   }
 
+  .nav-user-display {
+  display: none;
+  content: hidden;
+}
+
   .hamburger {
     display: flex;
     width: 2rem;
@@ -106,4 +114,5 @@
   .nav-links-container {
     display: flex;
   }
+  
 }
