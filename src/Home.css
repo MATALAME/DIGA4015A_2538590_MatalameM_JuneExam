@@ -58,39 +58,10 @@
   transform: scale(1.05);
 }
 
-.available-cards {
-  display: flex;
-  flex-wrap: wrap; /* allow wrapping */
-  gap: 0.5rem;
-  justify-content: center;
-  max-width: 1500px;
-  margin-top: 2rem;
-  padding: 0 1rem;
-}
-
-.available-card {
-  max-width: 30.5rem;
-  width: 100%; /* fill available width */
-  flex: 1 1 300px; /* flexible basis */
-}
-
-.one-punch-button, 
-.rocket-league-button, 
-.forza-league-button {
-  background-color: #0033cc;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  font-weight: bold;
-  font-size: 0.8rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
 @media (max-width: 767px) {
-  .All-games,
-  .Category-title {
+  .all-games,
+  .category-title {
     font-size: 1rem;
     text-align: center;
     margin-left: 0;
@@ -125,8 +96,8 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .All-games,
-  .Category-title {
+  .all-games,
+  .category-title {
     font-size: 1.1rem;
     text-align: center;
     margin-left: 1rem;

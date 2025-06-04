@@ -1,6 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { Link, useNavigate } from "react-router-dom";
 import GameComp from "./Games/GameComp";
 import CategoryCard from "./Genre/CategoryCard";
 import PlatformCard from "./Platfrom/PlatformCard";
@@ -59,9 +58,9 @@ function Home (){
       {/* <h2>Deals</h2> */}
      <div className="both">
         <div className="discount-games">
-         <DiscountComp game={discountGame30} discount={30} />
-         <DiscountComp game={discountGame50} discount={50} />
-      </div>
+          <DiscountComp game={discountGame30} discount={30} />
+          <DiscountComp game={discountGame50} discount={50} />
+        </div>
 
         <div className="platforms">
           {platforms.map((platform) => (
