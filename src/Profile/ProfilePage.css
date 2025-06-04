@@ -45,3 +45,71 @@
     max-height: auto;
     margin-left: 6rem;
 }
+
+.log-out-btn {
+  margin-top: 15rem;
+  margin-left: 6rem;
+  padding: 15px;
+  font-size: 1rem;
+  background-color: #2156f2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .account-title,
+  .signup-state,
+  .profile-sign-up,
+  .user-icon {
+    margin-left: 2rem;
+  }
+
+  .account-title {
+    font-size: 1.6rem;
+  }
+
+  .signup-state,
+  .profile-sign-up {
+    font-size: 0.95rem;
+  }
+
+  .user-display {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .user-icon {
+    max-width: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-title,
+  .signup-state,
+  .profile-sign-up,
+  .user-icon {
+    margin-left: 1rem;
+  }
+
+  .account-title {
+    font-size: 1.4rem;
+  }
+
+  .signup-state,
+  .profile-sign-up {
+    font-size: 0.9rem;
+  }
+
+  .user-display {
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .user-icon {
+    max-width: 3rem;
+  }
+}

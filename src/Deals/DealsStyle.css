@@ -19,7 +19,7 @@
 }
 
 .show-more-btn {
-  background-color: #366CC2; 
+  background-color: #0033cc; 
   font-family: "Roboto", sans-serif;
   color: white;
   border: none;
@@ -31,7 +31,7 @@
 }
 
 .show-more-btn:hover {
-  background-color: #2b5bb0; 
+  background-color: #001f99; 
 }
 
 /* .deal-title {

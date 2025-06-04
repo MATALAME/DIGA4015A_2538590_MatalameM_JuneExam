@@ -55,3 +55,53 @@
 .download-button:hover {
   background-color: #2f5bb0; 
 }
+
+@media (max-width: 768px) {
+  .download-container {
+    padding: 1.5rem;
+  }
+
+  .loading-text,
+  .ready-text {
+    font-size: 1.3rem;
+  }
+
+  .paragraph-element {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .download-button {
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-container {
+    padding: 1rem;
+  }
+
+  .loading-text,
+  .ready-text,
+  .letter-title {
+    font-size: 1.1rem;
+  }
+
+  .paragraph-element {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .download-button {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .download-card-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}

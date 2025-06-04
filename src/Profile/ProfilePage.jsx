@@ -26,6 +26,10 @@ function ProfilePage () {
               <p>{userData.email}</p>
             </div>
           </div>
+
+          <div className='log-out'>
+              <button onClick={() => navigate('/')} className="log-out-btn">LOG OUT</button>
+            </div>
         </div>
       ) : (                 //If not signed in - sign in button will appear
         <div className="user-info">

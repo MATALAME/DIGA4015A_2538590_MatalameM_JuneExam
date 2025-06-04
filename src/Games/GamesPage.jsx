@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useGameContext } from './GameContext';
 import GameComp from './GameComp';
 import "./GamesPage.css"
+import FooterComp from '../Additional/FooterComp';
 
 const GamesPage = () => {
   const { games } = useGameContext();
@@ -36,6 +37,7 @@ const GamesPage = () => {
       </div>
 
       <GameComp games={filteredGames} />
+      <FooterComp/>
     </div>
   );
 };

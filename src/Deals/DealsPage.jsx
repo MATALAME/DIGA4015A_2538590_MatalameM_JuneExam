@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useGameContext } from '../Games/GameContext';
 import GameComp from '../Games/GameComp';
 import "./DealsStyle.css";
+import FooterComp from '../Additional/FooterComp';
 
 const DealsPage = () => {
   const { games } = useGameContext();
@@ -70,6 +71,8 @@ const DealsPage = () => {
         <button className="show-more-btn" onClick={() => increaseVisible('discount50')}>Show More ▼</button>
       </div>
       <GameComp games={discount50List.slice(0, visibleGames.discount50)} />
+
+      <FooterComp/>
   
     </div>
   );

@@ -52,3 +52,44 @@
   transform: translateY(-5px);
 }
 
+@media (max-width: 768px) {
+  .platforms {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 220px;
+    gap: 0.5rem;
+  }
+
+  .platform-card {
+    width: 4.5rem;
+  }
+
+  .platform-image {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .platform-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .platforms {
+    grid-template-columns: 1fr;
+    max-width: 120px;
+    gap: 0.75rem;
+  }
+
+  .platform-card {
+    width: 100%;
+  }
+
+  .platform-image {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .platform-card p {
+    font-size: 0.8rem;
+  }
+}
