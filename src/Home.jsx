@@ -26,6 +26,11 @@ import youtube from "./Images/Youtube.png";
 import facebook from "./Images/Facebook.png";
 import instagram from "./Images/Instagram.png";
 
+//Available game components
+import onepunch from "./Images/OnepunchMan.jpg";
+import rocket from "./Images/RocketLeague.jpg";
+import forza from "./Images/Forza.jpg";
+
 const genres = [
     { name: "MMORPG", image: mmorpg },
     { name: "Fighting", image: fighting },
@@ -94,6 +99,12 @@ function Home (){
 
       <h2 className="All-games">NEW GAMES</h2>
       <GameComp games={[...games].sort(() => 0.5 - Math.random()).slice(0, 10)} />
+      
+      <div className="available-cards">
+        <img src = {onepunch} alt = "One Punch Man Cover" className="available-card"/>
+        <img src = {rocket} alt = "Rocket League Cover" className="available-card"/>
+        <img src = {forza} alt = "Forza Motorsport Cover" className="available-card"/>
+      </div>
       
         <footer className="app-footer">
           <img src={youtube} alt="Youtube Icon" className="social-media-icon" onClick={() => window.open("https://www.youtube.com/@T5G", "_blank")}/>

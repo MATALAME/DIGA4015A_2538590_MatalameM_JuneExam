@@ -101,9 +101,16 @@
   transform: scale(1.05);
 }
 
-.explore-page {
+.available-cards {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 1500px;
   margin-top: 2rem;
-  width: 100%;
+}
+
+.available-card {
+  max-width: 30rem;
 }
 
 .app-footer {
