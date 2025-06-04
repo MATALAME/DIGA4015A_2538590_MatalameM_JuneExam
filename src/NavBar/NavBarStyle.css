@@ -53,6 +53,7 @@
 .nav-user-icon {
   max-width:2.7rem;
   max-height:2.7rem;
+  cursor: pointer;
 }
 
 .hamburger {

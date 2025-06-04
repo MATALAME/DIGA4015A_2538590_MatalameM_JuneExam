@@ -95,6 +95,12 @@
   margin-bottom: 3rem;
 }
 
+.loading-purchase-text{
+  text-align: center;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
 .loading-msg {
   text-align: center;
   margin-top: 50px;

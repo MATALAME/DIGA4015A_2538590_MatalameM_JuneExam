@@ -10,7 +10,7 @@ const PurchasePage = () => {
   const game = games.find(g => g.id === parseInt(id));
   const navigate = useNavigate();
 
-  if (!game) return <p>Loading...</p>; 
+  if (!game) return <p className='loading-purchase-text'>Loading...</p>; 
   //A requirement from our final exam last year was to have a loading message for when the code is still trying to fetch data. So this checks 
   //if the game hasn't been found yet, and if so, it shows the temporary loading message.
 

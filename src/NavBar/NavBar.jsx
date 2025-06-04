@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import './NavBarStyle.css';
 import logo from "../Images/RawGamesLogoWhite.png";
@@ -13,6 +13,7 @@ function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const hideNavbarPaths = ['/', '/signup'];
   const { userData } = useInfo();
+  const navigate = useNavigate(); 
 
   if (hideNavbarPaths.includes(location.pathname.toLowerCase())) { // Doesn't render the nav bar if the app is on one these paths
     return null;
@@ -33,7 +34,7 @@ function NavBar() {
       </div>
 
        <div className='nav-user-display'> 
-            <img src={user} alt="User Icon" className='nav-user-icon' />
+            <img src={user} onClick={() => navigate('/profile')} alt="User Icon" className='nav-user-icon' />
             <p><strong>{userData.name}</strong></p>
         </div>
     </nav>
