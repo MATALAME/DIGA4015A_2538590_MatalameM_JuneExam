@@ -23,12 +23,21 @@
 }
 
 .letter-title {
-  margin-top: 5rem;
+  margin-top: 0rem;
   font-size: 1.3rem;
 }
 
 .paragraph-element {
   max-width: 75rem;
+  margin-top: 0;
+}
+
+.download-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 32px 0;
 }
 
 .download-button {

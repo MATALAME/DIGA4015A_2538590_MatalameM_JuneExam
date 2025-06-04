@@ -46,12 +46,7 @@ function PromotionComp() {
             <div className="promo-tag">NOW AVAILABLE</div>
             <h2 className="promo-title">{promo.title}</h2>
             <p className="promo-desc">{promo.description}</p>
-            <button
-              className="promo-button"
-              onClick={() => navigate(`/purchase/${promo.id}`)}
-            >
-              CHECK IT OUT
-            </button>
+            <button className="promo-button" onClick={() => navigate(`/purchase/${promo.id}`)}> EXPLORE MORE</button>
           </div>
 
           <div className="promo-image-container">

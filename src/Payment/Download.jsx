@@ -1,5 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import './Download.css'; 
+import DownloadComp from '../Additional/DownloadComp';
+
+import notice from "../Images/NoticeIcon.jpg";
+import design from "../Images/Design.jpg";
+import reference from "../Images/Reference.jpg";
+
+const files = [
+  {
+    title: 'NOTICE PDF',
+    image: notice,
+    file: '/DIGA4015A_2538590_NOTICE.pdf'
+  },
+  {
+    title: 'DESIGN DOC PDF',
+    image: design,
+    file: '/DIGA4015A_2538590_DESIGNDOC.pdf'
+  },
+  {
+    title: 'REFERENCE LIST PDF',
+    image: reference,
+    file: '/DIGA4015A_2538590_ReferenceList.pdf'
+  }
+];
+
 
 const Download = () => {
   const [loading, setLoading] = useState(true);
@@ -17,13 +41,15 @@ const Download = () => {
       ) : (
         <div className="download-content">
           <h3 className="ready-text">Your download is ready!</h3>
-          <a href="/RAWGAMES-DOWNLOAD.pdf" download> <button className="download-button">Download PDF</button></a> 
+           <div className="download-card-container">
+            {files.map((file, index) => (
+              <DownloadComp key={index} title={file.title} image={file.image} file={file.file} />
+            ))}
+          </div>
+
           <h4 className='letter-title'> Dear Customer</h4>
           <p className='paragraph-element'> Unfortunately, this is only a school assignment, so no actual gaming content can be downloaded. We at RAW GAMES (Matalame Mamabolo)
             appreciate your interest in our efficient gaming shopping experience and hope all your needs have been met.</p>
-          <p className='paragraph-element'> To make up for the lack of downloadable content, we have provided a pdf that consists of existing, relevant stores that offer original and licensed gaming
-            applications.</p>
-          <p className='paragraph-element'>If you have any further queries or issues, please leave a comment in the DIGA4015A exam portal, and we will respond as soon as we can.</p>
         </div>
       )}
     </div>
