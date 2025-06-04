@@ -1,14 +1,25 @@
-.DarkMode {
-    background-color: #121217;
-    color: #f4f4f4;
-    min-height: 100vh;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.account-title {
+    font-size: 2rem;
+    margin-left: 6rem;
 }
 
-.LightMode {
-    background-color: #f4f4f4;
-    color: #121217;
-    min-height: 100vh;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.user-display {
+  display: flex;
+  align-items: center;   
+  gap: 1.5rem;          
 }
 
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details p {
+ margin: 0;
+}
+
+.user-icon {
+    max-width: 4rem;
+    max-height: auto;
+    margin-left: 6rem;
+}

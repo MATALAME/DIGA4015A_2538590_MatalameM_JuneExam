@@ -28,7 +28,7 @@ function LandingPage() {
       </div> 
 
       <div className="landPage-buttons">
-        <button onClick={handleSignUpLogin} className="sign-up-btn" >SIGN IN</button>
+        <button onClick={handleSignUpLogin} className="sign-up-btn" >SIGN IN/LOG IN </button>
         <button onClick={handleSkip} className="skip-btn"> I'LL SIGN UP LATER </button>
       </div>
 
