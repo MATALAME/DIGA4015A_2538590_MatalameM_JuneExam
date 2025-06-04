@@ -1,0 +1,20 @@
+.app-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 1rem
+}
+
+.social-media-icon {
+  max-width: 4rem;
+  max-height: auto;
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}

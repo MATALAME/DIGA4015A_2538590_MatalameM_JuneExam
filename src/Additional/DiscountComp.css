@@ -1,0 +1,75 @@
+.discount-games {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.discount-game {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.discount-game:hover {
+  transform: scale(1.02);
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #004AAD;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  z-index: 1;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.discount-game-image {
+  width: 30rem;
+  max-width: 90vw;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 1.3rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.discount-game-image:hover {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.256);
+}
+
+.discount-game p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .discount-game-image {
+    width: 28rem;
+    height: 12rem;
+  }
+
+  .discount-badge {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .discount-game-image {
+    width: 90vw;
+    height: 11rem;
+  }
+
+  .discount-badge {
+    font-size: 0.85rem;
+  }
+}

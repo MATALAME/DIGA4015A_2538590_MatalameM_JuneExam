@@ -12,7 +12,7 @@
   margin-top: 0;
 }
 
-.All-games {
+.all-games {
   max-width: 1500px;
   margin-top: -2rem;
   margin-bottom: 0.8rem;
@@ -21,57 +21,14 @@
   font-size: 1.2rem;
 }
 
-.Category-title{
+.category-title{
   font-family: "Raleway", sans-serif;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 0rem;
 }
 
-.discount-games {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  margin: 0; 
-  padding: 0;
-}
-
-.discount-game {
-  position: relative;
-  text-align: center;
-}
-
-.discount-badge {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: #004AAD; 
-  color: white;
-  padding: 7px 15px;
-  border-radius: 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: "Roboto", sans-serif;
-  z-index: 1;
-}
-
-.discount-game-image {
-  width: 35rem;
-  border-radius: 1.3rem;
-  height: 14rem;
-}
-
-.discount-game-image:hover {
- box-shadow: 0 4px 15px rgba(255, 255, 255, 0.256); 
-}
-
-.discount-game p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-}
-
-.Platforms {
+.platforms {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -103,35 +60,32 @@
 
 .available-cards {
   display: flex;
+  flex-wrap: wrap; /* allow wrapping */
   gap: 0.5rem;
   justify-content: center;
   max-width: 1500px;
   margin-top: 2rem;
+  padding: 0 1rem;
 }
 
 .available-card {
-  max-width: 30rem;
+  max-width: 30.5rem;
+  width: 100%; /* fill available width */
+  flex: 1 1 300px; /* flexible basis */
 }
 
-.app-footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 5rem;
-  gap: 1rem
-}
-
-.social-media-icon {
-  max-width: 4rem;
-  max-height: auto;
+.one-punch-button, 
+.rocket-league-button, 
+.forza-league-button {
+  background-color: #0033cc;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 10px;
   cursor: pointer;
-}
-
-.copyright {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  transition: background-color 0.3s ease;
 }
 
 @media (max-width: 767px) {
@@ -164,6 +118,10 @@
   .copyright {
     font-size: 0.9rem;
   }
+
+  .available-card {
+    flex: 1 1 100%; 
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -189,6 +147,10 @@
 
   .social-media-icon {
     max-width: 3.5rem;
+  }
+
+  .available-card {
+    flex: 1 1 48%; 
   }
 }
 

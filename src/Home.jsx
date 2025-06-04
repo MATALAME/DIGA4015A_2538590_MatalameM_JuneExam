@@ -5,7 +5,10 @@ import GameComp from "./Games/GameComp";
 import CategoryCard from "./Genre/CategoryCard";
 import PlatformCard from "./Platfrom/PlatformCard";
 import { useGameContext } from "./Games/GameContext";
+import FooterComp from "./Additional/FooterComp";
+import PromotionComp from "./Additional/PromotionComp";
 import "./Home.css"
+import DiscountComp from "./Additional/DiscountComp";
 
 //Images for Categories
 import mmorpg from "./Images/MMORPG.jpg";
@@ -20,16 +23,6 @@ import playstation from "./Images/PlaystationLogoWhite.png";
 import xbox from "./Images/XBOXLogo.png";
 import pcgames from "./Images/PCGameLogo.png";
 import webrowser from "./Images/WebBrowserLogo.png";
-
-//Images for Footer
-import youtube from "./Images/Youtube.png";
-import facebook from "./Images/Facebook.png";
-import instagram from "./Images/Instagram.png";
-
-//Available game components
-import onepunch from "./Images/OnepunchMan.jpg";
-import rocket from "./Images/RocketLeague.jpg";
-import forza from "./Images/Forza.jpg";
 
 const genres = [
     { name: "MMORPG", image: mmorpg },
@@ -48,16 +41,15 @@ const genres = [
   ];
 
 function Home (){
-    const navigate = useNavigate();
     const { games } = useGameContext();
 
     const getRandomGame = (list) => {
-      const randomIndex = Math.floor(Math.random() * list.length);
+    const randomIndex = Math.floor(Math.random() * list.length);
       return list[randomIndex];
     };
 
-    const games30 = games.map(game => ({...game,title: `30% OFF`, image: game.thumbnail }));
-    const games50 = games.map(game => ({...game,title: `50% OFF`,image: game.thumbnail  }));
+    const games30 = games.map(game => ({ ...game, image: game.thumbnail }));
+    const games50 = games.map(game => ({ ...game, image: game.thumbnail }));
 
     const discountGame30 = getRandomGame(games30);
     const discountGame50 = getRandomGame(games50);
@@ -67,52 +59,32 @@ function Home (){
       {/* <h2>Deals</h2> */}
      <div className="both">
         <div className="discount-games">
-         {discountGame30 && (
-            <div className="discount-game button" onClick={() => navigate('/deals')}>
-              <div className="discount-badge">30% SALE</div>
-              <img src={discountGame30.image} alt={discountGame30.title} className="discount-game-image" />
-              {/* <p>{discountGame30.title}</p> */}
-            </div>
-          )}
-          {discountGame50 && (
-            <div className="discount-game button" onClick={() => navigate('/deals')}>
-              <div className="discount-badge">50% SALE</div>
-              <img src={discountGame50.image} alt={discountGame50.title} className="discount-game-image" />
-              {/* <p>{discountGame50.title}</p> */}
-            </div>
-          )}
+         <DiscountComp game={discountGame30} discount={30} />
+         <DiscountComp game={discountGame50} discount={50} />
       </div>
 
-        <div className="Platforms">
+        <div className="platforms">
           {platforms.map((platform) => (
             <PlatformCard key={platform.name} name={platform.name} image={platform.image} />
           ))}
         </div>
       </div>
 
-      <h2 className="Category-title">CATEGORIES</h2>
+      <h2 className="category-title">CATEGORIES</h2>
       <div className="Genre">
         {genres.map((genre) => (
           <CategoryCard key={genre.name} name={genre.name} image={genre.image} />
         ))}
       </div>
 
-      <h2 className="All-games">NEW GAMES</h2>
+      <h2 className="all-games">NEW GAMES</h2>
       <GameComp games={[...games].sort(() => 0.5 - Math.random()).slice(0, 10)} />
-      
-      <div className="available-cards">
-        <img src = {onepunch} alt = "One Punch Man Cover" className="available-card"/>
-        <img src = {rocket} alt = "Rocket League Cover" className="available-card"/>
-        <img src = {forza} alt = "Forza Motorsport Cover" className="available-card"/>
-      </div>
-      
-        <footer className="app-footer">
-          <img src={youtube} alt="Youtube Icon" className="social-media-icon" onClick={() => window.open("https://www.youtube.com/@T5G", "_blank")}/>
-          <img src={facebook} alt="Facebook Icon" className="social-media-icon" onClick={() => window.open("https://www.facebook.com/ign/", "_blank")} />
-          <img src={instagram} alt="Instagram Icon" className="social-media-icon" onClick={() => window.open("https://www.instagram.com/matalame_/", "_blank")} />
-        </footer>
 
-        <p className="copyright"> © 2025 Raw Games. All rights reserved. </p>
+      <div className="promotion-container">
+          <PromotionComp/>
+      </div>
+
+      <FooterComp/>
     </div>
   );
 }
