@@ -37,6 +37,7 @@
   max-width: 90vw;
   height: 14rem;
   object-fit: cover;
+  object-position: top;   
   border-radius: 1.3rem;
   transition: box-shadow 0.3s ease;
 }

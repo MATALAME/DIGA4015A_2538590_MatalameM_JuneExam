@@ -58,17 +58,29 @@ const PaymentPage = () => {
           <input type="email" required placeholder=''/>
 
           <label>Card Holder</label>
-          <input type="text" required placeholder=''/>
+          <input
+              type="text"
+              required
+              placeholder=""
+              onInput={(e) => {
+              e.target.value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+              }} />
 
           <div className="card-info">
              <div className="card-number">
               <label>Card Number</label>
-              <input type="text" />
+              <input type="text"
+                maxLength={16}
+                inputMode="numeric"
+                pattern="[0-9]*"
+                onInput={(e) => {
+                e.target.value = e.target.value.replace(/\D/g, '');
+                }} />
              </div>
 
             <div className="cvv">
               <label>CVV</label>
-              <input type="password"/>
+              <input type="password" maxLength={3}/>
             </div>
           </div>
 
