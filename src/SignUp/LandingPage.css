@@ -55,13 +55,13 @@
 }
 
 .sign-up-btn {
-  margin-top: 20px;
-  padding: 15px 20px;
+  margin-top: 1rem;
+  padding: 0.9rem 1.25rem;
   font-size: 1rem;
   background-color: #004AAD;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.6rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: "Roboto", sans-serif;
@@ -73,13 +73,13 @@
 }
 
 .skip-btn {
-  margin-top: 20px;
-  padding: 15px 20px;
+  margin-top: 1rem;
+  padding: 0.9rem 1.25rem;
   font-size: 1rem;
   background-color: #717F92;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.6rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: "Roboto", sans-serif;
@@ -105,9 +105,10 @@
   }
 
   .design-images {
-    gap: 2rem;
+    /* gap: 2rem;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
+     display: none;
   }
 
   .design-image {
@@ -153,6 +154,6 @@
   .sign-up-btn,
   .skip-btn {
     width: auto;
-    min-width: 200px;
+    min-width: 12.5rem;
   }
 }

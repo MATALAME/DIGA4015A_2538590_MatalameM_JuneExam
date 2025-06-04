@@ -19,12 +19,12 @@
 
 .discount-badge {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0.4rem;
+  right: 0.4rem;
   background-color: #0033cc;
   color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  border-radius: 3rem;
   font-size: 0.95rem;
   font-weight: bold;
   font-family: "Roboto", sans-serif;

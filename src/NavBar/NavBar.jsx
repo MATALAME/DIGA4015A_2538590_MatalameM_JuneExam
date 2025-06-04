@@ -9,11 +9,12 @@ import hamburger from "../Images/Hamburger.png";
 import user from "../Images/UserIcon.png";
 
 function NavBar() {
+  const navigate = useNavigate(); 
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const hideNavbarPaths = ['/', '/signup'];
   const { userData } = useInfo();
-  const navigate = useNavigate(); 
+
 
   if (hideNavbarPaths.includes(location.pathname.toLowerCase())) { // Doesn't render the nav bar if the app is on one these paths
     return null;
@@ -23,8 +24,8 @@ function NavBar() {
 
   return (
     <nav className="navbar">
-      <img src={logo} alt="Raw Games" className="navbar-logo" />
-      <img src={hamburger} className="hamburger" onClick={toggleMenu}/>  
+      <img src={logo} alt="Raw Games Logo" className="navbar-logo" />
+      <img src={hamburger} alt = "Hamburger Menu Logo" className="hamburger" onClick={toggleMenu}/>  
 
       <div className={`nav-links-container ${isMenuOpen ? 'show' : ''}`}>
         <NavLink to="/home" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</NavLink>

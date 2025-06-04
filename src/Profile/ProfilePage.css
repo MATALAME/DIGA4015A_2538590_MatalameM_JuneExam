@@ -13,13 +13,13 @@
 }
 
 .profile-sign-up {
-    margin-left: 6rem;
-  padding: 15px;
+  margin-left: 6rem;
+  padding: 0.9rem;
   font-size: 1rem;
   background-color: #2156f2;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.6rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: "Roboto", sans-serif;
@@ -49,12 +49,12 @@
 .log-out-btn {
   margin-top: 15rem;
   margin-left: 6rem;
-  padding: 15px;
+  padding: 0.9rem;
   font-size: 1rem;
   background-color: #2156f2;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.6rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: "Roboto", sans-serif;

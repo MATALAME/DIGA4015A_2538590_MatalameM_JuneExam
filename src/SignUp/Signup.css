@@ -40,37 +40,37 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 1rem;
+  margin-top: 1rem;
   font-family: "Raleway", sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
 }
 
 .form-group input {
-  padding: 10px;
-  border-radius: 6px;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
   border: none;
   font-size: 0.95rem;
-  width: 100%;
+  /* width: 100%; */
   background-color: #3a3a3f;
   color: white;
   outline: none;
 }
 
 .form-group input:focus {
-  border: 2px solid #2156f2;
+  border: 0.1rem solid #2156f2;
   background-color: #484850;
 }
 
 .submit-button {
-  margin-top: 20px;
-  padding: 15px;
+  margin-top: 1.6rem;
+  padding: 1rem;
   font-size: 1rem;
   background-color: #2156f2;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.3rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;

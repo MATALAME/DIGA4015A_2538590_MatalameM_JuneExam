@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .purchase-container {
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   font-family: "Roboto", sans-serif;
   color: #f3f3f3;
 }
@@ -11,11 +11,12 @@
 .game-details {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 2.5rem;
   /* background-color: #ffffff; */
-  border-radius: 20px;
+  border-radius: 1.25rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  padding: 30px;
+  padding: 1.8rem; 
+  font-family: "Roboto", sans-serif;
 }
 
 .game-image {
@@ -24,48 +25,49 @@
   /* min-width: 300px;
   max-width: 500px; */
   height: 100%;
-  border-radius: 15px;
+  border-radius: 0.9rem; 
   object-fit: cover;
   width: 100%;
 }
 
 .game-info {
   flex: 1;
-  min-width: 280px;
+  min-width: 17.5rem; 
+  font-family: "Roboto", sans-serif;
 }
 
 .game-title {
   font-size: 2.4rem;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 0.6rem; 
 }
 
 .game-description {
   font-size: 0.9rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.2rem; 
   color: #f3f3f3;
 }
 
 .game-more-info p {
-  margin: 6px 0;
-  font-size: 14px;
+  margin: 0.3rem 0; 
+  font-size: 0.8rem; 
   color: #f3f3f3;
 }
 
 .game-price {
-  font-size: 24px;
+  font-size: 1.5rem; 
   font-weight: 700;
-  margin: 20px 0;
+  margin: 1.2rem 0; 
 }
 
 .buy-button {
   background-color: #0033cc;
   color: white;
-  padding: 10px 50px;
+  padding: 0.6rem 3.1rem;
   border: none;
   font-weight: bold;
   font-size: 1.2rem;
-  border-radius: 10px;
+  border-radius: 0.6rem; 
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -75,27 +77,27 @@
 }
 
 .purchase-note {
-  font-size: 12px;
+  font-size: 0.75rem; 
   color: #8e8c8c;
-  margin-top: 7px;
+  margin-top: 0.4rem; 
 }
 
 .suggested-heading {
-  font-size: 22px;
+  font-size: 1.3rem;
   font-weight: bold;
-  margin-top: -10px;
+  margin-top: -0.6rem; 
   text-align: center;
-  margin-bottom: 20px;
-} 
+  margin-bottom: 1.25rem;
+}
 
 .suggested-section {
-   width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 3rem;
 }
 
-.loading-purchase-text{
+.loading-purchase-text {
   text-align: center;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
@@ -103,69 +105,69 @@
 
 .loading-msg {
   text-align: center;
-  margin-top: 50px;
-  font-size: 18px;
+  margin-top: 3.1rem; 
+  font-size: 1.1rem; 
   color: #666;
 }
 
 @media (max-width: 767px) {
   .game-details {
     flex-direction: column;
-    padding: 20px;
-    gap: 20px;
+    padding: 1.25rem; 
+    gap: 1.25rem; 
   }
 
   .game-title {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
   }
 
   .game-desc,
   .game-more-info p,
   .game-price {
-    font-size: 14px;
+    font-size: 0.8rem; 
     text-align: center;
   }
 
   .buy-button {
     width: 100%;
-    padding: 12px 0;
+    padding: 0.75rem 0; 
     font-size: 1rem;
   }
 
   .game-image {
-    max-height: 250px;
+    max-height: 15rem; 
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .game-details {
     flex-direction: column;
-    padding: 30px;
-    gap: 30px;
+    padding: 1.8rem; 
+    gap: 1.8rem;
   }
 
   .game-title {
-    font-size: 28px;
+    font-size: 1.75rem; 
     text-align: center;
   }
 
   .game-description,
   .game-more-info p,
   .game-price {
-    font-size: 15px;
+    font-size: 0.9rem;
     text-align: center;
   }
 
   .buy-button {
     width: 60%;
     font-size: 1.1rem;
-    padding: 12px 0;
+    padding: 0.7rem 0; 
     margin: 0 auto;
     display: block;
   }
 
   .game-image {
-    max-height: 300px;
+    max-height: 18rem; 
   }
 }
